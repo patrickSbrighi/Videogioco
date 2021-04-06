@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Videogioco.Personaggio">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAEAAAgAIAAAAAAEgAAA=</HashCode>
+      <FileName>Personaggio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Videogioco.Arma">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Armi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Videogioco.ArmaDistanza">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArmiDistanza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Videogioco.ArmaVicino">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArmiVicino.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Videogioco.Campo">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Campo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Videogioco.Utente">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAIAQAAAAAAAAAAUAQAAAAQQAAwAAAAAMAAAA=</HashCode>
+      <FileName>Utente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Personaggio" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Armi" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Videogioco.MainWindow">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQBAAAAAAAAAAAAAAAAAAAABAAIAAAAABIAAAAAgA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Videogioco.SceltaIniziale">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <AssociationLine Name="_personaggi" Type="Videogioco.Personaggio">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.888" Y="-0.245" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_utenti" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="5.861" />
+        <Point X="4.473" Y="5.861" />
+        <Point X="4.473" Y="3.6" />
+        <Point X="5.167" Y="3.6" Type="JumpStart" />
+        <Point X="5.333" Y="3.6" Type="JumpEnd" />
+        <Point X="7.557" Y="3.6" />
+        <Point X="7.557" Y="3.445" />
+        <Point X="8.5" Y="3.445" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAACABEAEABwAAABAAAAIAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>SceltaIniziale.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_armi" />
+      <Field Name="_personaggi" />
+      <Field Name="_utenti" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Videogioco.Combattimento">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <AssociationLine Name="_utenti" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.772" />
+        <Point X="6.599" Y="4.772" />
+        <Point X="6.599" Y="4.274" />
+        <Point X="7.408" Y="4.274" />
+        <Point X="7.408" Y="4.659" />
+        <Point X="9.25" Y="4.659" />
+        <Point X="9.25" Y="4.238" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAEQACIAAAAQACAACAQAQAAIAAAAAhABI=</HashCode>
+      <FileName>Combattimento.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_campi" />
+      <Field Name="_utenti" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
