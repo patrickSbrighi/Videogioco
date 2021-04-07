@@ -1,2 +1,2 @@
 # Videogioco
-Esercizio di gruppo sulla creazione di un videogioco
+Videogioco che simula un combattimento tra i due giocatori
