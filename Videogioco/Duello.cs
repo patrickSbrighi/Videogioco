@@ -2,32 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Videogioco
 {
-    /// <summary>
-    /// Logica di interazione per Combattimento.xaml
-    /// </summary>
-    public partial class Combattimento : Window
+    public class Duello
     {
-        private List<Campo> _campi;
-        private int _nRound;
+        public Utente[] Utenti { get; set; }
 
-        public Combattimento()
+        public Duello()
         {
-            InitializeComponent();
+            throw new System.NotImplementedException();
         }
 
-        public Duello Duello
+        public int RoundCorrente
         {
             get => default;
             set
@@ -44,7 +31,6 @@ namespace Videogioco
         {
             throw new System.NotImplementedException();
         }
-
         public void SchivaRosso()
         {
             throw new System.NotImplementedException();
@@ -55,8 +41,22 @@ namespace Videogioco
             throw new System.NotImplementedException();
         }
 
-        
-        public void RandomCampo()
+        public void RicaricaBlu()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RicaricaRosso()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetSchivati()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ColpoCritico()
         {
             throw new System.NotImplementedException();
         }
@@ -66,7 +66,12 @@ namespace Videogioco
             throw new System.NotImplementedException();
         }
 
-        public void TornaHome()
+        public void AumentaPuntiEseprienza()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ControllaVittoria()
         {
             throw new System.NotImplementedException();
         }

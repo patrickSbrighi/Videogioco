@@ -58,6 +58,7 @@
     <Compile Include="Combattimento.xaml.cs">
       <DependentUpon>Combattimento.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Duello.cs" />
     <Compile Include="SceltaIniziale.xaml.cs">
       <DependentUpon>SceltaIniziale.xaml</DependentUpon>
     </Compile>
