@@ -29,18 +29,6 @@ namespace Videogioco
             set;
         }
 
-        private int _vita;
-        public int Vita
-        {
-            get => _vita;
-            set
-            {
-                if (value < 0)
-                    throw new Exception("La vita non può essere negativa");
-                _vita = value;
-            }
-        }
-
         public Queue<Arma> Armi
         {
             get;
@@ -71,22 +59,28 @@ namespace Videogioco
             }
         }
 
+        public int VitaUtente
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int PuntiFerita
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void AggiungiPuntiEsperienza()
         {
             throw new System.NotImplementedException();
         }
 
         public void CambioArma()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void ColpoCritico(int danno)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Colpisci()
         {
             throw new System.NotImplementedException();
         }

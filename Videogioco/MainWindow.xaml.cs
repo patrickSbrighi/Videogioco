@@ -25,6 +25,14 @@ namespace Videogioco
             InitializeComponent();
         }
 
+        public SceltaIniziale SceltaIniziale
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private const string FILE_REGOLE = "";
         private const string FILE_PERSONAGGI = "";
         private const string FILE_ARMI = " ";

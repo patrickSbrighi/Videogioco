@@ -32,6 +32,14 @@ namespace Videogioco
             InitializeComponent();
         }
 
+        public Combattimento Combattimento
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void ApriCampo()
         {
             throw new System.NotImplementedException();
