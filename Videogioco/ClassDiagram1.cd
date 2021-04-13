@@ -3,7 +3,7 @@
   <Class Name="Videogioco.Personaggio">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAEAAAgAIAAAAAAEgAAA=</HashCode>
+      <HashCode>CAACIAQAAAAAAAAAAABAAAAAABAAAgAIAAACAAEgAAA=</HashCode>
       <FileName>Personaggio.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,8 +71,8 @@
         <Point X="4.5" Y="5.861" />
         <Point X="4.692" Y="5.861" />
         <Point X="4.692" Y="3.6" />
-        <Point X="4.917" Y="3.6" Type="JumpStart" />
-        <Point X="5.083" Y="3.6" Type="JumpEnd" />
+        <Point X="5.013" Y="3.6" Type="JumpStart" />
+        <Point X="5.179" Y="3.6" Type="JumpEnd" />
         <Point X="7.557" Y="3.6" />
         <Point X="7.557" Y="2.938" />
         <Point X="8.5" Y="2.938" />
