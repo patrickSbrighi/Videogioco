@@ -2,29 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Controls;
 
 namespace Videogioco
 {
     public class Duello
     {
-        public Utente[] Utenti { get; set; }
-
-        public Duello()
+        private Utente[] _utenti;
+        public Utente[] Utenti 
         {
-            throw new System.NotImplementedException();
-        }
-
-        public int RoundCorrente
-        {
-            get => default;
+            get => _utenti;
             set
             {
+                if (value.Length > 2)
+                    throw new Exception("Ci sono troppi utenti");
+                if (value[0].Squadra == value[1].Squadra)
+                    throw new Exception("Gli utenti hanno la stessa squadra");
+
+                _utenti = value;
+            } 
+        }
+
+        public Duello(Utente[] utenti)
+        {
+            Utenti = utenti;
+        }
+
+        private int _roundCorrente;
+        public int RoundCorrente
+        {
+            get => _roundCorrente;
+            set
+            {
+                if (value < 1 || value > 3)
+                    throw new Exception("Round non valido");
+                _roundCorrente = value;
             }
         }
 
         public void SparaRosso()
         {
-            throw new System.NotImplementedException();
+            //if()
         }
 
         public void SparaBlu()

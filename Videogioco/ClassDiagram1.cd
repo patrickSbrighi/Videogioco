@@ -38,7 +38,7 @@
   <Class Name="Videogioco.Utente">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAQAAAAAAAAAAEAQAEAAAAAAwAAAACMAAAA=</HashCode>
+      <HashCode>AAACAAAAIAQAAAAAAAAAAEAQABAAAAAAwAAAACMAAAA=</HashCode>
       <FileName>Utente.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -68,18 +68,18 @@
     </AssociationLine>
     <AssociationLine Name="_utenti" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.5" Y="5.861" />
-        <Point X="4.692" Y="5.861" />
+        <Point X="4.5" Y="6.245" />
+        <Point X="4.692" Y="6.245" />
         <Point X="4.692" Y="3.6" />
-        <Point X="4.917" Y="3.6" Type="JumpStart" />
-        <Point X="5.083" Y="3.6" Type="JumpEnd" />
+        <Point X="5.013" Y="3.6" Type="JumpStart" />
+        <Point X="5.179" Y="3.6" Type="JumpEnd" />
         <Point X="7.557" Y="3.6" />
         <Point X="7.557" Y="2.938" />
         <Point X="8.5" Y="2.938" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAgQAAAAACABEAEABwAAABAAAAIAAAAAAABAAAABAAA=</HashCode>
+      <HashCode>BAgQAAAAACABEAEABwAQABAAAAIAAAAEAABAEAABAAA=</HashCode>
       <FileName>SceltaIniziale.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -107,9 +107,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Videogioco.Duello">
-    <Position X="8.5" Y="4.75" Width="1.5" />
+    <Position X="8.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAIAAAEQEAAAAAAQACAAAAAAQAAIAAAAAhABI=</HashCode>
+      <HashCode>AACAAAAAIAAAEQEAAAAAAQACAAAAAAQAAIEAAAAhABI=</HashCode>
       <FileName>Duello.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>

@@ -67,7 +67,7 @@ namespace Videogioco
             }
         }
 
-        public int PuntiFerita
+        public int PuntiAttacco
         {
             get => default;
             set

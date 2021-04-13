@@ -26,6 +26,8 @@ namespace Videogioco
         private Utente[] _utenti;
         private int _isSetPersonaggioBlu;
         private int _isSetPeronaggioRosso;
+        private int FILE_XML_PERSONAGGI;
+        private int FILE_XML_ARMI;
 
         public SceltaIniziale()
         {
@@ -61,6 +63,16 @@ namespace Videogioco
         }
 
         public void AggiungiArmaBlu()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void LeggiFileArmi()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void LeggiFilePersonaggi()
         {
             throw new System.NotImplementedException();
         }
