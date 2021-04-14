@@ -7,24 +7,41 @@ namespace Videogioco
 {
     public class Campo
     {
-        public Campo()
+        string _id;
+        string _source;
+        public Campo(string id, string source)
         {
-            throw new System.NotImplementedException();
+            _id = id;
+            _source = source;
         }
 
-        public int Id
+        public string Id
         {
-            get => default;
+            get
+            {
+                return Id;
+            }
             set
             {
+               if(value != "")
+                {
+                    _id = value;
+                }
             }
         }
 
-        public int Source
+        public string Source
         {
-            get => default;
+            get
+            {
+                return _source;
+            }
             set
             {
+                if (value != "")
+                {
+                    _source = value;
+                }
             }
         }
     }

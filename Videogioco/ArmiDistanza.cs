@@ -7,16 +7,22 @@ namespace Videogioco
 {
     public class ArmaDistanza : Arma
     {
-        public ArmaDistanza()
+        int _puntiFerita;
+        public ArmaDistanza(int puntiFerita,string id,string nome) : base(id,nome)
         {
-            throw new System.NotImplementedException();
+            _puntiFerita = puntiFerita;
         }
 
         public int PuntiFerita
         {
-            get => default;
+            get
+            { return _puntiFerita; }
             set
             {
+                if(value!= null)
+                {
+                    _puntiFerita = value;
+                }
             }
         }
     }
