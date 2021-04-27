@@ -75,7 +75,7 @@ namespace Videogioco
             }
         }
 
-        public void AggiungiPuntiEsperienza()
+        public void AggiungiPuntiEsperienza(int punti)
         {
             throw new System.NotImplementedException();
         }

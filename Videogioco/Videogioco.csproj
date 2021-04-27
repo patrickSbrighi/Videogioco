@@ -76,7 +76,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Arma.cs" />
-    <Compile Include="Armi.cs" />
     <Compile Include="ArmiDistanza.cs" />
     <Compile Include="ArmiVicino.cs" />
     <Compile Include="Campo.cs" />

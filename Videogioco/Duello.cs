@@ -8,6 +8,8 @@ namespace Videogioco
 {
     public class Duello
     {
+        //utente 0 = blu, utente 1 = rosso
+
         private Utente[] _utenti;
         public Utente[] Utenti 
         {
@@ -23,9 +25,10 @@ namespace Videogioco
             } 
         }
 
-        public Duello(Utente[] utenti)
+        public Duello(Utente[] utenti, int round = 1)
         {
             Utenti = utenti;
+            RoundCorrente = round;
         }
 
         private int _roundCorrente;
@@ -42,21 +45,47 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            //if()
+            if(Utenti[0].Squadra == Squadre.Rossa)
+            {
+                Random rand = new Random();
+                int dannoColpo = rand.Next(1, 4);
+                Utenti[1].VitaUtente -= (Utenti[0].PuntiAttacco + dannoColpo + ColpoCritico());
+                
+            }
+            else
+            {
+                Random rand = new Random();
+                int dannoColpo = rand.Next(1, 4);
+                Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
+            }
         }
 
         public void SparaBlu()
         {
-            throw new System.NotImplementedException();
+            if (Utenti[0].Squadra == Squadre.Blu)
+            {
+                Random rand = new Random();
+                int dannoColpo = rand.Next(1, 4);
+                Utenti[1].VitaUtente -= (Utenti[0].PuntiAttacco + dannoColpo + ColpoCritico());
+
+            }
+            else
+            {
+                Random rand = new Random();
+                int dannoColpo = rand.Next(1, 4);
+                Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
+            }
         }
         public void SchivaRosso()
         {
-            throw new System.NotImplementedException();
+            //timer
+            Utenti[1].Schivato = true;
         }
 
         public void SchivaBlu()
         {
-            throw new System.NotImplementedException();
+            //tiemr
+            Utenti[0].Schivato = true;
         }
 
         public void RicaricaBlu()
@@ -71,27 +100,75 @@ namespace Videogioco
 
         public void SetSchivati()
         {
-            throw new System.NotImplementedException();
+            
         }
 
-        public void ColpoCritico()
+        public int ColpoCritico()
         {
-            throw new System.NotImplementedException();
+            //Il colpo critico avviene solo se il random è uguale a 1
+            Random rand = new Random();
+            int scelta = rand.Next(1, 21);
+
+            if (scelta == 1)
+                return 50;
+            return 0;
         }
 
         public void NuovoRound()
         {
-            throw new System.NotImplementedException();
+            Utenti[0].VitaUtente = Utenti[0].Personaggio.PuntiVita;
+            Utenti[1].VitaUtente = Utenti[1].Personaggio.PuntiVita;
+
+            Utenti[0].CambioArma();
+            Utenti[1].CambioArma();
+
+            RoundCorrente++;
         }
 
-        public void AumentaPuntiEseprienza()
+        private void AumentaPuntiEseprienza(int indiceVincente)
         {
-            throw new System.NotImplementedException();
+            if(RoundCorrente == 3)
+            {
+                if(indiceVincente == 0)
+                {
+                    Utenti[indiceVincente].AggiungiPuntiEsperienza(100);
+                    Utenti[indiceVincente + 1].AggiungiPuntiEsperienza(50);
+                }
+                else
+                {
+                    Utenti[indiceVincente].AggiungiPuntiEsperienza(100);
+                    Utenti[indiceVincente - 1].AggiungiPuntiEsperienza(50);
+                }
+            }
         }
 
-        public void ControllaVittoria()
+        public string ControllaVittoria()
         {
-            throw new System.NotImplementedException();
+            if (Utenti[0].VitaUtente <= 0)
+            {
+                if (RoundCorrente == 3)
+                {
+                    AumentaPuntiEseprienza(1);
+                }
+
+                if (Utenti[1].Squadra == Squadre.Blu)
+                    return "Blu";
+
+                return "Rosso";
+            }
+            else if (Utenti[1].VitaUtente <= 0)
+            {
+                if (RoundCorrente == 3)
+                {
+                    AumentaPuntiEseprienza(0);
+                }
+
+                if (Utenti[0].Squadra == Squadre.Blu)
+                    return "Blu";
+                return "Rosso";
+            }
+            else
+                return "Nan";
         }
     }
 }
