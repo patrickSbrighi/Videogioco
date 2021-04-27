@@ -7,19 +7,41 @@ namespace Videogioco
 {
     public abstract class Arma
     {
-        public int Id
+        string _id;
+        string _nome;
+        public Arma(string id, string nome)
         {
-            get => default;
+            _id = id;
+            _nome = nome;
+        }
+
+        public string Id
+        {
+            get
+            {
+                return Id;
+            }
             set
             {
+                if (value != "")
+                {
+                    _id = value;
+                }
             }
         }
 
-        public int Nome
+        public string Nome
         {
-            get => default;
+            get
+            {
+                return _nome;
+            }
             set
             {
+                if (value != "")
+                {
+                    _nome = value;
+                }
             }
         }
     }

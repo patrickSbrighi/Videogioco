@@ -7,16 +7,23 @@ namespace Videogioco
 {
     public class ArmaVicino : Arma
     {
-        public ArmaVicino()
+        int _puntiFerita;
+        public ArmaVicino(int puntiFerita, string id, string nome) : base(id, nome)
         {
             throw new System.NotImplementedException();
+            //TODO
         }
 
         public int PuntiFerita
         {
-            get => default;
+            get
+            { return _puntiFerita; }
             set
             {
+                if (value > 0)
+                {
+                    _puntiFerita = value;
+                }
             }
         }
     }
