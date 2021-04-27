@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Videogioco
 {
@@ -33,28 +34,20 @@ namespace Videogioco
             }
         }
 
-        private const string FILE_REGOLE = "";
-        private const string FILE_PERSONAGGI = "";
-        private const string FILE_ARMI = " ";
+        private const string FILE_REGOLE = "Regolamento.pdf";
+        private const string FILE_PERSONAGGI = "Armi.pdf";
+        private const string FILE_ARMI = "";
 
         public void PassaASceltaPersonaggi()
         {
             throw new System.NotImplementedException();
         }
 
-        public void ApriRegolamento()
+        public void ApriFile(string file)
         {
-            throw new System.NotImplementedException();
+            Process.Start(file);
         }
 
-        public void ApriArmi()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void ApriPersonaggi()
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

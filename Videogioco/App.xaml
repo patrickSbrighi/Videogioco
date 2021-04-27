@@ -4,6 +4,19 @@
              xmlns:local="clr-namespace:Videogioco"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://aplication:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml"/>
+                <ResourceDictionary Source="pack://aplication:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#ffb2227a"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#333333"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#0288d1"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#ffffff"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#015f92"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#ffffff"/>
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#689f38"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#ffffff"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

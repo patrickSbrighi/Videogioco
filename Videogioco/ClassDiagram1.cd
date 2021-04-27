@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Videogioco.Personaggio">
+  <Class Name="Videogioco.Personaggio" Collapsed="true">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAACIAQAAAAAAAAAAABAAAAAABAAAgAIAAACAAEgAAA=</HashCode>
@@ -63,7 +63,7 @@
     <Position X="3" Y="4.25" Width="1.5" />
     <AssociationLine Name="_personaggi" Type="Videogioco.Personaggio">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.888" Y="-0.245" />
+        <Position X="-0.245" Y="0.888" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="_utenti" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
@@ -71,8 +71,8 @@
         <Point X="4.5" Y="5.861" />
         <Point X="4.692" Y="5.861" />
         <Point X="4.692" Y="3.6" />
-        <Point X="5.013" Y="3.6" Type="JumpStart" />
-        <Point X="5.179" Y="3.6" Type="JumpEnd" />
+        <Point X="5.042" Y="3.6" Type="JumpStart" />
+        <Point X="5.208" Y="3.6" Type="JumpEnd" />
         <Point X="7.557" Y="3.6" />
         <Point X="7.557" Y="2.938" />
         <Point X="8.5" Y="2.938" />
@@ -93,7 +93,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Videogioco.Combattimento">
-    <Position X="5.75" Y="4.25" Width="1.5" />
+    <Position X="5.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACIAAAAAACAAKAQAQAAAAAAAAhAAI=</HashCode>
       <FileName>Combattimento.xaml.cs</FileName>
