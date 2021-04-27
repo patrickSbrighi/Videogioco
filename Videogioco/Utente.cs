@@ -12,7 +12,7 @@ namespace Videogioco
     }
     public class Utente
     {
-        public Utente(Queue<Arma> armi, int puntiAttacco, string sourceArma, string sourcePersonaggio, bool schivato = false, Squadre squadra, int vitaUtente)
+        public Utente(Queue<Arma> armi, int puntiAttacco, string sourceArma, string sourcePersonaggio, Squadre squadra, int vitaUtente, bool schivato = false)
         {
             Armi = armi;
             PuntiAttacco = puntiAttacco;

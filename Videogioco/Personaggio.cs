@@ -7,54 +7,119 @@ namespace Videogioco
 {
     public class Personaggio
     {
+        private string _id;
+        private string _nome;
+        private int _pV;
+        private int _pF;
+        private int _esperienza;
+        private int _lSkin;
         public Personaggio()
         {
-            throw new System.NotImplementedException();
+            _lSkin = 0;
         }
 
-        public int Id
+        public string Id
         {
-            get => default;
-            set
+            get
             {
+                return _id;
             }
-        }
-
-        public int Nome
-        {
-            get => default;
             set
             {
+                if (String.IsNullOrEmpty(value) == true)
+                {
+                    throw new Exception("id vuoto ");
+                }
+                else
+                {
+                    _id = value;
+                }
+            }
+
+        }
+
+        public string Nome
+        {
+            get
+            {
+                return _nome;
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(value) == true)
+                {
+                    throw new Exception("nome non valido");
+                }
+                else
+                {
+                    _nome = value;
+                }
             }
         }
 
         public int PuntiVita
         {
-            get => default;
+            get
+            {
+                return _pV;
+            }
             set
             {
+                if (value >= 0)
+                {
+                    _pV = value;
+                }
+                else
+                {
+                    throw new Exception("La vita non può essere negativa");
+                }
             }
         }
 
-        public int PuntiFerita
+        public int PuntiAttacco
         {
-            get => default;
+            get
+            {
+                return _pF;
+            }
             set
             {
+                if (value > 0)
+                {
+                    _pF = value;
+                }
+                else
+                {
+                    throw new Exception("L'attacco non può essere negativo");
+                }
             }
         }
 
         public int Esperienza
         {
-            get => default;
+            get
+            {
+                return _esperienza;
+            }
             set
             {
+                if (value >= 0)
+                {
+                    _esperienza = value;
+                }
+                else
+                {
+                    throw new Exception("L'esperienza non può essere negativa");
+                }
             }
         }
 
         public void CalcolaSkin()
         {
-            throw new System.NotImplementedException();
+            if (_esperienza >= 300/*||_esperienza>=600||_esperienza>=1000*/)
+            {
+                _lSkin++;
+            }
         }
     }
 }
