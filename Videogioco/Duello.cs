@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Controls;
+using System.Timers;
+using System.Threading;
 
 namespace Videogioco
 {
@@ -45,7 +47,7 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            if(Utenti[0].Squadra == Squadre.Rossa)
+            /*if(Utenti[0].Squadra == Squadre.Rossa)
             {
                 Random rand = new Random();
                 int dannoColpo = rand.Next(1, 4);
@@ -57,12 +59,19 @@ namespace Videogioco
                 Random rand = new Random();
                 int dannoColpo = rand.Next(1, 4);
                 Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
-            }
+            }*/
+
+            Random rand = new Random();
+            int dannoColpo = rand.Next(1, 4);
+            Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
+            Utenti[1].Carico = false;
+            Thread ricarica = new Thread(new ThreadStart(RicaricaRosso));
+            ricarica.Start();
         }
 
         public void SparaBlu()
         {
-            if (Utenti[0].Squadra == Squadre.Blu)
+            /*if (Utenti[0].Squadra == Squadre.Blu)
             {
                 Random rand = new Random();
                 int dannoColpo = rand.Next(1, 4);
@@ -74,40 +83,58 @@ namespace Videogioco
                 Random rand = new Random();
                 int dannoColpo = rand.Next(1, 4);
                 Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
-            }
+            }*/
+
+            Random rand = new Random();
+            int dannoColpo = rand.Next(1, 4);
+            Utenti[1].VitaUtente -= (Utenti[0].PuntiAttacco + dannoColpo + ColpoCritico());
+            Utenti[0].Carico = false;
+            Thread ricarica = new Thread(new ThreadStart(RicaricaBlu));
+            ricarica.Start();
         }
         public void SchivaRosso()
         {
-            //timer
             Utenti[1].Schivato = true;
+            Thread t1 = new Thread(new ThreadStart(TogliSchivaRosso));
+            t1.Start();
         }
 
         public void SchivaBlu()
         {
-            //tiemr
             Utenti[0].Schivato = true;
+            Thread t1 = new Thread(new ThreadStart(TogliSchivaBlu));
+            t1.Start();
         }
 
-        public void RicaricaBlu()
+        private void RicaricaBlu()
         {
-            throw new System.NotImplementedException();
+            Thread.Sleep(1500);
+            Utenti[0].Carico = true;
         }
 
-        public void RicaricaRosso()
+        private void RicaricaRosso()
         {
-            throw new System.NotImplementedException();
+            Thread.Sleep(1500);
+            Utenti[1].Carico = true;
         }
 
-        public void SetSchivati()
+        private void TogliSchivaRosso()
         {
-            
+            Thread.Sleep(3000);
+            Utenti[1].Schivato = false;
+        }
+
+        private void TogliSchivaBlu()
+        {
+            Thread.Sleep(3000);
+            Utenti[0].Schivato = false;
         }
 
         public int ColpoCritico()
         {
             //Il colpo critico avviene solo se il random è uguale a 1
             Random rand = new Random();
-            int scelta = rand.Next(1, 21);
+            int scelta = rand.Next(1, 51);
 
             if (scelta == 1)
                 return 50;

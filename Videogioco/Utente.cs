@@ -21,6 +21,7 @@ namespace Videogioco
             Schivato = schivato;
             Squadra = squadra;
             VitaUtente = vitaUtente;
+            Carico = true;
         }
 
         private Squadre _squadra;
@@ -121,6 +122,12 @@ namespace Videogioco
         {
             throw new System.NotImplementedException();
             //TODO
+        }
+
+        public bool Carico
+        {
+            get;
+            set;
         }
     }
 }
