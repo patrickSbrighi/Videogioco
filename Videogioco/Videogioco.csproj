@@ -128,5 +128,14 @@
   <ItemGroup>
     <Resource Include="home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngtree-comic-vs-background-with-blue-orange-image_321556.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imgPersonaggi\ascia.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

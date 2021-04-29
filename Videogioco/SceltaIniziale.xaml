@@ -7,6 +7,38 @@
         mc:Ignorable="d"
         Title="SceltaIniziale" Height="450" Width="800">
     <Grid>
-        
+        <Image Margin="-145,-165,-144.667,-165.333" Source="VS.png" Stretch="Fill"/>
+        <Button x:Name="btnBP2" Content="Button" HorizontalAlignment="Left" Margin="706,123,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBP3" Content="Button" HorizontalAlignment="Left" Margin="706,183,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBP4" Content="Button" HorizontalAlignment="Left" Margin="706,244,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBP5" Content="Button" HorizontalAlignment="Left" Margin="706,304,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBP1" Content="Button" HorizontalAlignment="Left" Margin="706,62,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBA3" Content="Button" HorizontalAlignment="Left" Margin="624,183,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBA4" Content="Button" HorizontalAlignment="Left" Margin="624,244,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBA5" Content="Button" HorizontalAlignment="Left" Margin="624,304,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBA6" Content="Button" HorizontalAlignment="Left" Margin="624,365,0,-0.333" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBA2" Content="Button" HorizontalAlignment="Left" Margin="624,123,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBP6" Content="Button" HorizontalAlignment="Left" Margin="706,365,0,-0.333" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnBA1" Content="Button" HorizontalAlignment="Left" Margin="624,62,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRA2" Content="Button" HorizontalAlignment="Left" Margin="114,119,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRA3" Content="Button" HorizontalAlignment="Left" Margin="114,179,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRA4" Content="Button" HorizontalAlignment="Left" Margin="114,240,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRA5" Content="Button" HorizontalAlignment="Left" Margin="114,300,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRA1" Content="Button" HorizontalAlignment="Left" Margin="114,58,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRP3" Content="Button" HorizontalAlignment="Left" Margin="31,179,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRP4" Content="Button" HorizontalAlignment="Left" Margin="31,240,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRP5" Content="Button" HorizontalAlignment="Left" Margin="31,300,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRP6" Content="Button" HorizontalAlignment="Left" Margin="31,361,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRP2" Content="Button" HorizontalAlignment="Left" Margin="31,119,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRA6" Content="Button" HorizontalAlignment="Left" Margin="114,361,0,0" VerticalAlignment="Top" Width="57" Height="56"/>
+        <Button x:Name="btnRP1"  HorizontalAlignment="Left" Margin="31,58,0,0" VerticalAlignment="Top" Width="57" Height="56">
+            <Image Source="/imgPersonaggi/ascia.jpeg"/>
+        </Button>
+        <Label Content="Blu" HorizontalAlignment="Left" Margin="624,18,0,0" VerticalAlignment="Top" Width="161"/>
+        <Label Content="Rosso" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="161"/>
+
+
+
+
     </Grid>
 </Window>
