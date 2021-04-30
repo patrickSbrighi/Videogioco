@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Combattimento" Height="450" Width="800">
     <Grid>
-        
+        <Image Name="image" HorizontalAlignment="Left" Height="420" Margin="-2,-1,0,0" VerticalAlignment="Top" Width="794"/>
+
     </Grid>
 </Window>

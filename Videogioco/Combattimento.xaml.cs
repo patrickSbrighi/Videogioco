@@ -21,10 +21,13 @@ namespace Videogioco
     {
         private List<Campo> _campi;
         private int _nRound;
+        private Random r;
 
         public Combattimento()
         {
             InitializeComponent();
+            r = new Random();
+            RandomCampo();
         }
 
         public Duello Duello
@@ -58,7 +61,9 @@ namespace Videogioco
         
         public void RandomCampo()
         {
-            throw new System.NotImplementedException();
+            int campo = r.Next(1, 4);
+            BitmapImage img= new BitmapImage(new Uri("Campo"+campo.ToString()+".png", UriKind.Relative));
+            image.Source = img;
         }
 
         public void NuovoRound()

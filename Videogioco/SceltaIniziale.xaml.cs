@@ -32,6 +32,8 @@ namespace Videogioco
         public SceltaIniziale()
         {
             InitializeComponent();
+            
+            
         }
 
         public Combattimento Combattimento
