@@ -10,8 +10,7 @@ namespace Videogioco
         int _puntiFerita;
         public ArmaVicino(int puntiFerita, string id, string nome) : base(id, nome)
         {
-            throw new System.NotImplementedException();
-            //TODO
+            PuntiFerita = puntiFerita;
         }
 
         public int PuntiFerita

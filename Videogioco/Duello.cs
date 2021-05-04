@@ -11,25 +11,45 @@ namespace Videogioco
     public class Duello
     {
         //utente 0 = blu, utente 1 = rosso
-
-        private Utente[] _utenti;
-        public Utente[] Utenti 
+        //TO DO SOSTITUIRE L'ARRAY DI UTENTI CON UTENTEROSSO E UTENTEBLU
+        private Utente _utenteBlu;
+        private Utente _utenteRosso;
+        public Utente UtenteRosso 
         {
-            get => _utenti;
+            get => _utenteRosso;
             set
             {
+                /*
                 if (value.Length > 2)
                     throw new Exception("Ci sono troppi utenti");
                 if (value[0].Squadra == value[1].Squadra)
                     throw new Exception("Gli utenti hanno la stessa squadra");
 
-                _utenti = value;
-            } 
+                _utenti = value;*/
+
+                //TO DO gestire il set dell'utente
+            }
+        }
+        public Utente UtenteBlu
+        {
+            get => _utenteBLu;
+            set
+            {
+                /*
+                if (value.Length > 2)
+                    throw new Exception("Ci sono troppi utenti");
+                if (value[0].Squadra == value[1].Squadra)
+                    throw new Exception("Gli utenti hanno la stessa squadra");
+
+                _utenti = value;*/
+
+                //TO DO gestire il set dell'utente
+            }
         }
 
-        public Duello(Utente[] utenti, int round = 1)
+        public Duello(Utente utenteBlu, Utente utenteRosso, int round = 1)
         {
-            Utenti = utenti;
+            
             RoundCorrente = round;
         }
 
