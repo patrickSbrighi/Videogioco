@@ -12,11 +12,10 @@ namespace Videogioco
     }
     public class Utente
     {
-        public Utente(Queue<Arma> armi, int puntiAttacco, string sourceArma, string sourcePersonaggio, Squadre squadra, int vitaUtente, bool schivato = false)
+        public Utente(Queue<Arma> armi, int puntiAttacco, string sourcePersonaggio, Squadre squadra, int vitaUtente, bool schivato = false)
         {
             Armi = armi;
-            PuntiAttacco = puntiAttacco;
-            SourceArma = sourceArma;
+            PuntiAttacco = puntiAttacco;            
             SourcePersonaggio = sourcePersonaggio;
             Schivato = schivato;
             Squadra = squadra;
@@ -59,12 +58,8 @@ namespace Videogioco
             private set;
         }
 
-        private string _sourceArma;
-        public string SourceArma
-        {
-            get;
-            private set;
-        }
+       
+        
 
         public bool Schivato
         {

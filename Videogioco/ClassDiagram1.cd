@@ -38,7 +38,7 @@
   <Class Name="Videogioco.Utente">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACCAAAAIAQAAAAAAAAAAEAQABoAAAAAwEAgACMBAAE=</HashCode>
+      <HashCode>AACCAAAAAAQAAAAAAAAAAEAQABIAAAAAwEAgACMBAAE=</HashCode>
       <FileName>Utente.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -51,7 +51,7 @@
   <Class Name="Videogioco.MainWindow">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQBAAAAAABAAAAAAAgAAEAABAAIAAAAABIAAAAAgA=</HashCode>
+      <HashCode>AAARBAAAAAAAAAAAAAAgAAAAABAAIAAAAABIAAAAAgA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -61,41 +61,31 @@
   </Class>
   <Class Name="Videogioco.SceltaIniziale">
     <Position X="3" Y="5.75" Width="1.5" />
-    <AssociationLine Name="_personaggi" Type="Videogioco.Personaggio">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.888" Y="-0.245" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="_utenti" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="_utenteRosso" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.5" Y="7.745" />
-        <Point X="4.692" Y="7.745" />
+        <Point X="4.5" Y="8.387" />
+        <Point X="4.692" Y="8.387" />
         <Point X="4.692" Y="3.767" />
         <Point X="5.013" Y="3.767" Type="JumpStart" />
         <Point X="5.179" Y="3.767" Type="JumpEnd" />
         <Point X="7.557" Y="3.767" />
-        <Point X="7.557" Y="3.042" />
-        <Point X="8.5" Y="3.042" />
+        <Point X="7.557" Y="2.834" />
+        <Point X="8.5" Y="2.834" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>BAgQAAAAACABEAEABwAQABAAAAIAAAAEAABAEAABAAA=</HashCode>
+      <HashCode>BCgQAAAgACABAAAALwAQABAAQAIAAAAEAAAEEBABAQA=</HashCode>
       <FileName>SceltaIniziale.xaml.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Combattimento" />
-    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="_armi" />
-      <Field Name="_personaggi" />
-      <Field Name="_utenti" />
+      <Field Name="_utenteRosso" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Videogioco.Combattimento">
     <Position X="6.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAACIAAAAAACAAKAQAQAAAAAAAAhAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACIAAAAAACAAKAQAQAAAABAAAhAAI=</HashCode>
       <FileName>Combattimento.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

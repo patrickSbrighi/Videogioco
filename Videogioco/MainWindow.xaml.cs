@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,27 +46,24 @@ namespace Videogioco
 
         public void ApriRegolamento()
         {
-            throw new System.NotImplementedException();
+            Process.Start(FILE_REGOLE); 
         }
 
         public void ApriArmi()
         {
-            throw new System.NotImplementedException();
+            Process.Start(FILE_ARMI);
         }
 
         public void ApriPersonaggi()
         {
-            throw new System.NotImplementedException();
+            Process.Start(FILE_PERSONAGGI);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnInizia_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            SceltaIniziale s = new SceltaIniziale();
+            s.Show();            
+            this.Close();
         }
     }
 }
