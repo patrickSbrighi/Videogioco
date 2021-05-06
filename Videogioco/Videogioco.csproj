@@ -108,6 +108,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Personaggi Videogioco\.DS_Store" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,13 +121,49 @@
     <Resource Include="pexels-irina-iriser-1366957.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sfondo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="sfondopng.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngtree-comic-vs-background-with-blue-orange-image_321556.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Golem blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Guerriero blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Maga blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Marksman blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Ninja blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Valkiria blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Golem rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Guerriero rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Maga rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Marksman rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Ninja rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Valkiria rosso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Armi blu\arco blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\balestra blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\fucile blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\guantone blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\lancia blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\spada blu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Armi rosso\arco rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\balestra rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\fucile rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\guantone rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\lancia rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\spada rosso.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
