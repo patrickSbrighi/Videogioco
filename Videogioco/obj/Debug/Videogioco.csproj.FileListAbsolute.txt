@@ -5,14 +5,12 @@ C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Videogioco.csprojAssemblyR
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Combattimento.g.cs
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\MainWindow.g.cs
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\SceltaIniziale.g.cs
-C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Vittoria.g.cs
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\App.g.cs
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Videogioco_MarkupCompile.cache
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Videogioco_MarkupCompile.lref
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Combattimento.baml
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\MainWindow.baml
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\SceltaIniziale.baml
-C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Vittoria.baml
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Videogioco.g.resources
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Videogioco.Properties.Resources.resources
 C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\Videogioco.csproj.GenerateResource.cache

@@ -29,10 +29,8 @@ namespace Videogioco
 
         public Duello Duello
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public void SparaRosso()
@@ -69,6 +67,31 @@ namespace Videogioco
         public void TornaHome()
         {
             throw new System.NotImplementedException();
+        }
+
+        /*A = schiva sinistra
+          D = spara sinistra
+          right = schiva destra
+          left = spara destra
+        */
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.A)
+            {
+                SchivaBlu();
+            }
+            else if(e.Key == Key.D)
+            {
+                SparaBlu();
+            }
+            else if (e.Key == Key.Right)
+            {
+                SchivaRosso();
+            }
+            else if (e.Key == Key.Left)
+            {
+                SparaRosso();
+            }
         }
     }
 }

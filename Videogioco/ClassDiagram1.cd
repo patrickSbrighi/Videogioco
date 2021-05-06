@@ -51,7 +51,7 @@
   <Class Name="Videogioco.MainWindow">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQBAAAAAAAAAAAAAAgAAAAABAAIAAAAABIAAAAAgA=</HashCode>
+      <HashCode>AAAQBAAAAAABAAAAAAAgAAEAABAAIAAAAABIAAAAAgA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -95,7 +95,7 @@
   <Class Name="Videogioco.Combattimento">
     <Position X="6.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACIAAAAAACAAKAQAQAAAAAAAAhAAI=</HashCode>
+      <HashCode>AAACAAAAAAAAAAACIAAAAAACAAKAQAQAAAAAAAAhAAI=</HashCode>
       <FileName>Combattimento.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
