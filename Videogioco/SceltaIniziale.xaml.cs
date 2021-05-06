@@ -215,7 +215,7 @@ namespace Videogioco
         //fine metodi bottoni--------------------------------------------------------------------------------
         private void btnInizia_Click(object sender, RoutedEventArgs e)
         {
-            Combattimento combattimento = new Combattimento();
+            Combattimento combattimento = new Combattimento(utenteRosso, utenteBlu);
             combattimento.Show();
             this.Close();
         }
