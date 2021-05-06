@@ -35,7 +35,7 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            Duello.Utenti
+            //Duello.Utenti
         }
 
         public void SparaBlu()
@@ -66,7 +66,9 @@ namespace Videogioco
 
         public void TornaHome()
         {
-            throw new System.NotImplementedException();
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
 
         /*A = schiva sinistra
