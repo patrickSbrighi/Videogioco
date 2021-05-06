@@ -35,7 +35,7 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            throw new System.NotImplementedException();
+            Duello.Utenti
         }
 
         public void SparaBlu()
