@@ -47,9 +47,10 @@ namespace Videogioco
             }
         }
 
-        public Duello(Utente utenteBlu, Utente utenteRosso, int round = 1)
+        public Duello(ref Utente utenteBlu, ref Utente utenteRosso, int round = 1)
         {
-            
+            UtenteBlu = utenteBlu;
+            UtenteRosso = UtenteRosso;
             RoundCorrente = round;
         }
 
@@ -81,12 +82,15 @@ namespace Videogioco
                 Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
             }*/
 
-            Random rand = new Random();
-            int dannoColpo = rand.Next(1, 4);
-            UtenteBlu.VitaUtente -= (UtenteRosso.PuntiAttacco + dannoColpo + ColpoCritico());
-            UtenteRosso.Carico = false;
-            Thread ricarica = new Thread(new ThreadStart(RicaricaRosso));
-            ricarica.Start();
+            if (UtenteRosso.Carico && !UtenteBlu.Schivato)
+            {
+                Random rand = new Random();
+                int dannoColpo = rand.Next(1, 4);
+                UtenteBlu.VitaUtente -= (UtenteRosso.PuntiAttacco + dannoColpo + ColpoCritico());
+                UtenteRosso.Carico = false;
+                Thread ricarica = new Thread(new ThreadStart(RicaricaRosso));
+                ricarica.Start();
+            }
         }
 
         public void SparaBlu()
@@ -105,12 +109,15 @@ namespace Videogioco
                 Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
             }*/
 
-            Random rand = new Random();
-            int dannoColpo = rand.Next(1, 4);
-            UtenteRosso.VitaUtente -= (UtenteBlu.PuntiAttacco + dannoColpo + ColpoCritico());
-            UtenteBlu.Carico = false;
-            Thread ricarica = new Thread(new ThreadStart(RicaricaBlu));
-            ricarica.Start();
+            if (UtenteBlu.Carico && !UtenteRosso.Schivato)
+            {
+                Random rand = new Random();
+                int dannoColpo = rand.Next(1, 4);
+                UtenteRosso.VitaUtente -= (UtenteBlu.PuntiAttacco + dannoColpo + ColpoCritico());
+                UtenteBlu.Carico = false;
+                Thread ricarica = new Thread(new ThreadStart(RicaricaBlu));
+                ricarica.Start();
+            }
         }
         public void SchivaRosso()
         {

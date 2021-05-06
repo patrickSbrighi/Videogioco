@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Videogioco
 {
@@ -21,13 +24,31 @@ namespace Videogioco
     {
         private List<Campo> _campi;
         private int _nRound;
+        private Utente _rosso;
+        private Utente _blu;
+        private string _idUltimoCampoScelto;
 
-        public Combattimento()
+        public Combattimento(Utente Rosso, Utente Blu)
         {
             InitializeComponent();
+            _rosso = Rosso;
+            _blu = Blu;
+            _duello = new Duello(ref _rosso, ref _blu);
+            InizializzazioneElementi();
         }
 
-        public Duello Duello
+        private void InizializzazioneElementi()
+        {
+            progressBlu.Maximum = _blu.VitaUtente;
+            progressRosso.Maximum = _rosso.VitaUtente;
+            progressBlu.Value = progressBlu.Maximum;
+            progressRosso.Value = progressRosso.Maximum;
+            RandomCampo();
+            btnSessione.Visibility = Visibility.Hidden;
+            //TODO immagini
+        }
+
+        private Duello _duello
         {
             get;
             set;
@@ -35,33 +56,49 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            //Duello.Utenti
+            _duello.SparaRosso();
+            progressBlu.Value = _blu.VitaUtente;
+
+            string vincitore = _duello.ControllaVittoria();
+
+            if (vincitore != "Nan")
+                Vittoria(vincitore);
         }
 
         public void SparaBlu()
         {
-            throw new System.NotImplementedException();
+            _duello.SparaBlu();
+            progressRosso.Value = _rosso.VitaUtente;
         }
 
         public void SchivaRosso()
         {
-            throw new System.NotImplementedException();
+            _duello.SchivaRosso();
         }
 
         public void SchivaBlu()
         {
-            throw new System.NotImplementedException();
+            _duello.SparaBlu();
         }
 
         
         public void RandomCampo()
         {
-            throw new System.NotImplementedException();
+            Random rand = new Random();
+            int nScelto = rand.Next(0, 5);
+            Campo campo = _campi[nScelto];
+            _idUltimoCampoScelto = campo.Id;
+
+            Uri a = new Uri(campo.Source, UriKind.Relative);
+            ImageSource b = new BitmapImage(a);
+            imgSfondo.Source = b;
+
         }
 
-        public void NuovoRound()
+        private void NuovoRound()
         {
-            throw new System.NotImplementedException();
+            _duello.NuovoRound();
+            InizializzazioneElementi();
         }
 
         public void TornaHome()
@@ -94,6 +131,40 @@ namespace Videogioco
             {
                 SparaRosso();
             }
+        }
+
+        private void LeggiFileCampi()
+        {
+            using (StreamReader sr = new StreamReader("Campi.xml"))
+            {
+                while (sr.EndOfStream)
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(Campo));
+
+                    _campi.Add((Campo)serializer.Deserialize(sr));
+                }
+            }
+        }
+
+        private void Vittoria(string vincitore)
+        {
+            lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
+            btnSessione.Visibility = Visibility.Visible;
+
+            if (_duello.RoundCorrente != 3)
+                btnSessione.Content = "Prossimo round";
+            else
+                btnSessione.Content = "Home";
+        }
+
+        private void btnSessione_Click(object sender, RoutedEventArgs e)
+        {
+            btnSessione.Visibility = Visibility.Hidden;
+
+            if (_duello.RoundCorrente != 3)
+                NuovoRound();
+            else
+                TornaHome();
         }
     }
 }

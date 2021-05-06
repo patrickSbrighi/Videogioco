@@ -46,7 +46,7 @@ namespace Videogioco
 
         public void ApriCampo()
         {
-            Combattimento c = new Combattimento();
+            Combattimento c = new Combattimento(_utenteRosso, _utenteBlu);
 
             c.Show();
 
@@ -111,9 +111,9 @@ namespace Videogioco
             {
                 while (sr.EndOfStream)
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Personaggio));
+                    XmlSerializer serializer = new XmlSerializer(typeof(Arma));
 
-                    _personaggi.Add((Personaggio)serializer.Deserialize(sr));
+                    _armi.Add((Arma)serializer.Deserialize(sr));
                 }
             }
         }
