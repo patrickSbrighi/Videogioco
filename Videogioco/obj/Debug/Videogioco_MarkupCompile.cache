@@ -4,15 +4,23 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 D:\Git\Videgiocoisback\Videogioco\Videogioco\obj\Debug\
+=======
+C:\Users\User\Desktop\Videogioco\Videogioco\obj\Debug\
+>>>>>>> Stashed changes
 Videogioco
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 D:\Git\Videgiocoisback\Videogioco\Videogioco\App.xaml
+=======
+C:\Users\User\Desktop\Videogioco\Videogioco\App.xaml
+>>>>>>> Stashed changes
 3817614231
 
-15-86594308
+15-1422595622
 13-1505183044
 Combattimento.xaml;MainWindow.xaml;SceltaIniziale.xaml;
 
