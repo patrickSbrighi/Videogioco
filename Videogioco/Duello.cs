@@ -10,47 +10,21 @@ namespace Videogioco
 {
     public class Duello
     {
-        //utente 0 = blu, utente 1 = rosso
-        //TO DO SOSTITUIRE L'ARRAY DI UTENTI CON UTENTEROSSO E UTENTEBLU
-        private Utente _utenteBlu;
-        private Utente _utenteRosso;
         public Utente UtenteRosso 
         {
-            get => _utenteRosso;
-            set
-            {
-                /*
-                if (value.Length > 2)
-                    throw new Exception("Ci sono troppi utenti");
-                if (value[0].Squadra == value[1].Squadra)
-                    throw new Exception("Gli utenti hanno la stessa squadra");
-
-                _utenti = value;*/
-
-                //TO DO gestire il set dell'utente
-            }
+            get;
+            set;
         }
         public Utente UtenteBlu
         {
-            get => _utenteBlu;
-            set
-            {
-                /*
-                if (value.Length > 2)
-                    throw new Exception("Ci sono troppi utenti");
-                if (value[0].Squadra == value[1].Squadra)
-                    throw new Exception("Gli utenti hanno la stessa squadra");
-
-                _utenti = value;*/
-
-                //TO DO gestire il set dell'utente
-            }
+            get;
+            set;
         }
 
         public Duello(ref Utente utenteBlu, ref Utente utenteRosso, int round = 1)
         {
             UtenteBlu = utenteBlu;
-            UtenteRosso = UtenteRosso;
+            UtenteRosso = utenteRosso;
             RoundCorrente = round;
         }
 
@@ -68,20 +42,6 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            /*if(Utenti[0].Squadra == Squadre.Rossa)
-            {
-                Random rand = new Random();
-                int dannoColpo = rand.Next(1, 4);
-                Utenti[1].VitaUtente -= (Utenti[0].PuntiAttacco + dannoColpo + ColpoCritico());
-                
-            }
-            else
-            {
-                Random rand = new Random();
-                int dannoColpo = rand.Next(1, 4);
-                Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
-            }*/
-
             if (UtenteRosso.Carico && !UtenteBlu.Schivato)
             {
                 Random rand = new Random();
@@ -95,20 +55,6 @@ namespace Videogioco
 
         public void SparaBlu()
         {
-            /*if (Utenti[0].Squadra == Squadre.Blu)
-            {
-                Random rand = new Random();
-                int dannoColpo = rand.Next(1, 4);
-                Utenti[1].VitaUtente -= (Utenti[0].PuntiAttacco + dannoColpo + ColpoCritico());
-
-            }
-            else
-            {
-                Random rand = new Random();
-                int dannoColpo = rand.Next(1, 4);
-                Utenti[0].VitaUtente -= (Utenti[1].PuntiAttacco + dannoColpo + ColpoCritico());
-            }*/
-
             if (UtenteBlu.Carico && !UtenteRosso.Schivato)
             {
                 Random rand = new Random();

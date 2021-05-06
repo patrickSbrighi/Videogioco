@@ -23,7 +23,7 @@ namespace Videogioco
     public partial class Combattimento : Window
     {
         private List<Campo> _campi;
-        private int _nRound;
+        //private int _nRound;
         private Utente _rosso;
         private Utente _blu;
         private string _idUltimoCampoScelto;
@@ -45,7 +45,12 @@ namespace Videogioco
             progressRosso.Value = progressRosso.Maximum;
             RandomCampo();
             btnSessione.Visibility = Visibility.Hidden;
-            //TODO immagini
+            _rosso.CalcoloSource();
+            _blu.CalcoloSource();
+            imgBlu.Source = new BitmapImage(new Uri (_blu.SourcePersonaggio));
+            imgRosso.Source = new BitmapImage(new Uri(_rosso.SourcePersonaggio));
+            //imgArmaBlu.Source = new BitmapImage(new Uri(_blu.Armi.Peek.SourceArma);
+            //imgArmaRossa.Source = new BitmapImage(new Uri(_rosso.Armi.Peek.SourceArma));
         }
 
         private Duello _duello
@@ -78,7 +83,7 @@ namespace Videogioco
 
         public void SchivaBlu()
         {
-            _duello.SparaBlu();
+            _duello.SchivaBlu();
         }
 
         
