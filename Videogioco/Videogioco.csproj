@@ -149,5 +149,21 @@
   <ItemGroup>
     <Folder Include="bin\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Armi blu\arco blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\balestra blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\fucile blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\guantone blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\lancia blu.png" />
+    <Resource Include="Personaggi Videogioco\Armi blu\spada blu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Armi rosso\arco rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\balestra rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\fucile rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\guantone rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\lancia rosso.png" />
+    <Resource Include="Personaggi Videogioco\Armi rosso\spada rosso.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
