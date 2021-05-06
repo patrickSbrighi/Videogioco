@@ -40,7 +40,7 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void SparaBlu()
@@ -73,7 +73,11 @@ namespace Videogioco
 
         public void TornaHome()
         {
-            throw new System.NotImplementedException();
+            MainWindow home = new MainWindow();
+
+            home.Show();
+
+            this.Close();
         }
     }
 }
