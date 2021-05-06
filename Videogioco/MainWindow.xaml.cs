@@ -57,14 +57,33 @@ namespace Videogioco
             throw new System.NotImplementedException();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+
+
+        private void BtnInizia_Click(object sender, RoutedEventArgs e)
+        {
+            SceltaIniziale s = new SceltaIniziale();
+            s.Show();
+            this.Close();
+        }
+
+        private void btnRegolamento_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnMostraPersonaggi_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void btnMostraArmi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
+
+        
     }
 }
