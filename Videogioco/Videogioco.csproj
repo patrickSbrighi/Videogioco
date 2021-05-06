@@ -108,6 +108,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Personaggi Videogioco\.DS_Store" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,9 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pexels-irina-iriser-1366957.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="sfondo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="sfondopng.png" />
@@ -135,7 +133,21 @@
     <Resource Include="VS.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imgPersonaggi\ascia.jpeg" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Golem blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Guerriero blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Maga blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Marksman blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Ninja blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\Valkiria blu.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Golem rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Guerriero rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Maga rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Marksman rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Ninja rosso.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Valkiria rosso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
