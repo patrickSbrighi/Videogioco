@@ -10,12 +10,36 @@ namespace Videogioco
         private string _id;
         private string _nome;
         private int _pV;
-        private int _pF;
+        private int _pA;
         private int _esperienza;
-        private int _lSkin;
-        public Personaggio()
+        private int _livelloSkin;
+
+        public Personaggio(string id, string nome, int pV, int pA, int esperienza)
         {
-            _lSkin = 0;
+            Id = id;
+            Nome = nome;
+            PuntiVita = pV;
+            PuntiAttacco = pA;
+            Esperienza = esperienza;
+        }
+
+        public int LivelloSkin
+        {
+            get
+            {
+                return _livelloSkin;
+            }
+            set
+            {
+                if(value == 1 || value == 2 || value == 3)
+                {
+                    _livelloSkin = value;
+                }
+                else
+                {
+                    throw new Exception("il livello può essere impostato a 1, 2 o 3, riprovare.");
+                }
+            }
         }
 
         public string Id
@@ -28,7 +52,7 @@ namespace Videogioco
             {
                 if (String.IsNullOrEmpty(value) == true)
                 {
-                    throw new Exception("id vuoto ");
+                    throw new Exception("id vuoto");
                 }
                 else
                 {
@@ -80,13 +104,13 @@ namespace Videogioco
         {
             get
             {
-                return _pF;
+                return _pA;
             }
             set
             {
                 if (value > 0)
                 {
-                    _pF = value;
+                    _pA = value;
                 }
                 else
                 {
@@ -116,9 +140,16 @@ namespace Videogioco
 
         public void CalcolaSkin()
         {
-            if (_esperienza >= 300/*||_esperienza>=600||_esperienza>=1000*/)
+            if (_esperienza < 300)
             {
-                _lSkin++;
+                _livelloSkin = 1;
+            }else if (_esperienza >= 300 && _esperienza < 600)
+            {
+                _livelloSkin = 2;
+            }
+            else
+            {
+                _livelloSkin = 3;
             }
         }
     }

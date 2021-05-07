@@ -12,8 +12,9 @@ namespace Videogioco
     }
     public class Utente
     {
-        public Utente(Queue<Arma> armi, int puntiAttacco, string sourcePersonaggio, Squadre squadra, int vitaUtente, bool schivato = false)
+        public Utente(Personaggio personaggio, Queue<Arma> armi, int puntiAttacco, string sourcePersonaggio, Squadre squadra, int vitaUtente, bool schivato = false)
         {
+            Personaggio = personaggio;
             Armi = armi;
             PuntiAttacco = puntiAttacco;            
             SourcePersonaggio = sourcePersonaggio;
@@ -21,6 +22,11 @@ namespace Videogioco
             Squadra = squadra;
             VitaUtente = vitaUtente;
             Carico = true;
+        }
+
+        public Utente()
+        {
+
         }
 
         private Squadre _squadra;
@@ -40,6 +46,7 @@ namespace Videogioco
             }
         }
 
+        private Personaggio _personaggio;
         public Personaggio Personaggio
         {
             get;
@@ -57,9 +64,6 @@ namespace Videogioco
             get;
             private set;
         }
-
-       
-        
 
         public bool Schivato
         {
@@ -101,7 +105,6 @@ namespace Videogioco
             }
         }
 
-        private Personaggio _personaggio;
         public void AggiungiPuntiEsperienza(int puntiEsperienzaDaAggiungere)
         {
             _personaggio.Esperienza += puntiEsperienzaDaAggiungere;
@@ -115,8 +118,175 @@ namespace Videogioco
 
         public void CalcoloSource()
         {
-            throw new System.NotImplementedException();
-            //TODO
+            _personaggio.CalcolaSkin();
+            if (_squadra == Squadre.Rossa)
+            {
+                if (_personaggio.LivelloSkin == 1)
+                {
+                    if (_personaggio.Nome == "Golem")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 1.png";
+                    }
+                    else if (_personaggio.Nome == "Guerriero")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 1.png";
+                    }
+                    else if (_personaggio.Nome == "Maga")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 1.png";
+                    }
+                    else if (_personaggio.Nome == "Marksman")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 1.png";
+                    }
+                    else if (_personaggio.Nome == "Ninja")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 1.png";
+                    }
+                    else if (_personaggio.Nome == "Valkiria")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 1.png";
+                    }
+                }
+                else if (_personaggio.LivelloSkin == 2)
+                {
+                    if (_personaggio.Nome == "Golem")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 2.png";
+                    }
+                    else if (_personaggio.Nome == "Guerriero")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 2.png";
+                    }
+                    else if (_personaggio.Nome == "Maga")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 2.png";
+                    }
+                    else if (_personaggio.Nome == "Marksman")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 2.png";
+                    }
+                    else if (_personaggio.Nome == "Ninja")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 2.png";
+                    }
+                    else if (_personaggio.Nome == "Valkiria")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 2.png";
+                    }
+                }
+                else if (_personaggio.LivelloSkin == 3)
+                {
+                    if (_personaggio.Nome == "Golem")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 3.png";
+                    }
+                    else if (_personaggio.Nome == "Guerriero")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 3.png";
+                    }
+                    else if (_personaggio.Nome == "Maga")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 3.png";
+                    }
+                    else if (_personaggio.Nome == "Marksman")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 3.png";
+                    }
+                    else if (_personaggio.Nome == "Ninja")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 3.png";
+                    }
+                    else if (_personaggio.Nome == "Valkiria")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 3.png";
+                    }
+                }
+            }
+            else if (_squadra == Squadre.Blu)
+            {
+                if (_personaggio.LivelloSkin == 1)
+                {
+                    if (_personaggio.Nome == "Golem")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 1.png";
+                    }
+                    else if (_personaggio.Nome == "Guerriero")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 1.png";
+                    }
+                    else if (_personaggio.Nome == "Maga")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 1.png";
+                    }
+                    else if (_personaggio.Nome == "Marksman")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman blu 1.png";
+                    }
+                    else if (_personaggio.Nome == "Ninja")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 1.png";
+                    }
+                    else if (_personaggio.Nome == "Valkiria")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 1.png";
+                    }
+                }
+                else if (_personaggio.LivelloSkin == 2)
+                {
+                    if (_personaggio.Nome == "Golem")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 2.png";
+                    }
+                    else if (_personaggio.Nome == "Guerriero")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 2.png";
+                    }
+                    else if (_personaggio.Nome == "Maga")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 2.png";
+                    }
+                    else if (_personaggio.Nome == "Marksman")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman roblusso 2.png";
+                    }
+                    else if (_personaggio.Nome == "Ninja")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 2.png";
+                    }
+                    else if (_personaggio.Nome == "Valkiria")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 2.png";
+                    }
+                }
+                else if (_personaggio.LivelloSkin == 3)
+                {
+                    if (_personaggio.Nome == "Golem")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 3.png";
+                    }
+                    else if (_personaggio.Nome == "Guerriero")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 3.png";
+                    }
+                    else if (_personaggio.Nome == "Maga")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 3.png";
+                    }
+                    else if (_personaggio.Nome == "Marksman")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman blu 3.png";
+                    }
+                    else if (_personaggio.Nome == "Ninja")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 3.png";
+                    }
+                    else if (_personaggio.Nome == "Valkiria")
+                    {
+                        SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 3.png";
+                    }
+                }
+            }
         }
 
         public bool Carico

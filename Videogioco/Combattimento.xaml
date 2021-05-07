@@ -8,8 +8,8 @@
         Title="Combattimento" Height="450" Width="800" KeyDown="Window_KeyDown">
     <Grid>
         <Image x:Name="imgSfondo" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
-        <Image x:Name="imgRosso" HorizontalAlignment="Left" Height="225" Margin="77,140,0,0" VerticalAlignment="Top" Width="161"/>
-        <Image x:Name="imgBlu" HorizontalAlignment="Left" Height="225" Margin="544,140,0,0" VerticalAlignment="Top" Width="160"/>
+        <Image x:Name="imgRosso" HorizontalAlignment="Left" Height="225" Margin="94,140,0,0" VerticalAlignment="Top" Width="161"/>
+        <Image x:Name="imgBlu" HorizontalAlignment="Left" Height="225" Margin="531,140,0,0" VerticalAlignment="Top" Width="160"/>
         <ProgressBar x:Name="progressRosso" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="392" Margin="0,10,0,0"/>
         <ProgressBar x:Name="progressBlu" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="392" Margin="396,10,0,0" RenderTransformOrigin="0.5,0.5">
             <ProgressBar.RenderTransform>
@@ -22,6 +22,6 @@
             </ProgressBar.RenderTransform>
         </ProgressBar>
         <Label x:Name="lblVincitore" Content="Ha vinto il giocatore rosso" HorizontalAlignment="Left" Height="104" Margin="0,31,0,0" VerticalAlignment="Top" Width="792" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="48"/>
-        <Button x:Name="btnSessione" Content="Prossimo round" HorizontalAlignment="Left" Height="159" Margin="273,140,0,0" VerticalAlignment="Top" Width="266" FontSize="36" Click="btnSessione_Click"/>
+        <Button x:Name="btnSessione" Content="Prossimo round" HorizontalAlignment="Left" Height="159" Margin="260,140,0,0" VerticalAlignment="Top" Width="266" FontSize="36" Click="btnSessione_Click"/>
     </Grid>
 </Window>
