@@ -49,6 +49,8 @@ namespace Videogioco
             _blu.CalcoloSource();
             imgBlu.Source = new BitmapImage(new Uri (_blu.SourcePersonaggio));
             imgRosso.Source = new BitmapImage(new Uri(_rosso.SourcePersonaggio));
+            
+            
             //imgArmaBlu.Source = new BitmapImage(new Uri(_blu.Armi.Peek.SourceArma);
             //imgArmaRossa.Source = new BitmapImage(new Uri(_rosso.Armi.Peek.SourceArma));
         }
