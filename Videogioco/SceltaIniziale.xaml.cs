@@ -50,14 +50,7 @@ namespace Videogioco
             sceltaPersPossibileRosso = true;
             sceltaPersPossibileBlu = true;
         }
-       
-        public Combattimento Combattimento
-        {
-            get => default;
-            set
-            {
-            }
-        }
+
         public void ApriCampo()
         {
             throw new System.NotImplementedException();

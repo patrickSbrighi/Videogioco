@@ -3,7 +3,7 @@
   <Class Name="Videogioco.Personaggio">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAACIAQAAAAAAAAAAABAAAAAABAAAgAIAAACAAEgAAA=</HashCode>
+      <HashCode>CAACIAQAAAAAAAAAAABAAAAAABAAAgAIAAAAICEgAAA=</HashCode>
       <FileName>Personaggio.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,36 +61,18 @@
   </Class>
   <Class Name="Videogioco.SceltaIniziale">
     <Position X="3" Y="5.75" Width="1.5" />
-    <AssociationLine Name="_utenteRosso" Type="Videogioco.Utente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4.5" Y="8.387" />
-        <Point X="4.692" Y="8.387" />
-        <Point X="4.692" Y="3.767" />
-        <Point X="5.013" Y="3.767" Type="JumpStart" />
-        <Point X="5.179" Y="3.767" Type="JumpEnd" />
-        <Point X="7.557" Y="3.767" />
-        <Point X="7.557" Y="2.834" />
-        <Point X="8.5" Y="2.834" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>BCgQAAAgACABAAAALwAQABAAQAIAAAAEAAAEEBABAQA=</HashCode>
+      <HashCode>FS0QAQAAACAAgAECBYBQACBAACABJGAEAAEAEAEggQA=</HashCode>
       <FileName>SceltaIniziale.xaml.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="_utenteRosso" />
-    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Videogioco.Combattimento">
     <Position X="6.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACIAAAAAACAAKAQAQAAAABAAAhAAI=</HashCode>
+      <HashCode>AIACEAAAAAAAAAACKAACAAAKAAEAQAQAAAAEABAhAAI=</HashCode>
       <FileName>Combattimento.xaml.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Duello" />
-    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="_campi" />
     </ShowAsCollectionAssociation>
@@ -99,12 +81,9 @@
   <Class Name="Videogioco.Duello">
     <Position X="11" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAgAAAIAAAEQEAAAAAAQACAAAAAAQAAIEAAAAhAAo=</HashCode>
+      <HashCode>AACAgAAAIAAAEQEAAAAAAQACAAAAAQQAAIEAAAAhAAo=</HashCode>
       <FileName>Duello.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Utenti" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
