@@ -27,21 +27,15 @@ namespace Videogioco
             InitializeComponent();
         }
 
-        public SceltaIniziale SceltaIniziale
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        private const string FILE_REGOLE = "";
-        private const string FILE_PERSONAGGI = "";
-        private const string FILE_ARMI = " ";
+        private const string FILE_REGOLE = ""; //TODO zutty pdf
+        private const string FILE_PERSONAGGI = "";//TODO zutty pdf
+        private const string FILE_ARMI = " ";//TODO zutty pdf
 
         public void PassaASceltaPersonaggi()
         {
-            throw new System.NotImplementedException();
+            SceltaIniziale s = new SceltaIniziale();
+            s.Show();
+            this.Close();
         }
 
         public void ApriRegolamento()
@@ -61,9 +55,7 @@ namespace Videogioco
 
         private void BtnInizia_Click(object sender, RoutedEventArgs e)
         {
-            SceltaIniziale s = new SceltaIniziale();
-            s.Show();            
-            this.Close();
+            PassaASceltaPersonaggi();
         }
     }
 }
