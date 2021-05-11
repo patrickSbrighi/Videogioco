@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace Videogioco
 {
@@ -39,6 +41,8 @@ namespace Videogioco
         public SceltaIniziale()
         {
             InitializeComponent();
+            armi = new List<Arma>();
+            personaggi = new List<Personaggio>();
             personaggioSceltoBlu = null;
             personaggioSceltoRosso = null;
             nArmiBluScelte = 0;
@@ -49,35 +53,32 @@ namespace Videogioco
             ImpostaBottoni(true,0);
             sceltaPersPossibileRosso = true;
             sceltaPersPossibileBlu = true;
-        }
-
-        public void ApriCampo()
-        {
-            throw new System.NotImplementedException();
-        }
-        public void AggiungePersonaggioRosso()
-        {
-            throw new System.NotImplementedException();
-        }
-        public void AggiungiPersonaggioBlu()
-        {
-            throw new System.NotImplementedException();
-        }
-        public void AggiungiAmraRossa()
-        {
-            throw new System.NotImplementedException();
-        }
-        public void AggiungiArmaBlu()
-        {
-            throw new System.NotImplementedException();
+            LeggiFileArmi();
+            LeggiFilePersonaggi();
         }
         public void LeggiFileArmi()
         {
-            throw new System.NotImplementedException();
+            using (StreamReader sr = new StreamReader("Armi.xml"))
+            {
+                while (sr.EndOfStream)
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(Personaggio));
+
+                    armi.Add((Arma)serializer.Deserialize(sr));
+                }
+            }
         }
         public void LeggiFilePersonaggi()
         {
-            throw new System.NotImplementedException();
+            using (StreamReader sr = new StreamReader("Personaggi.xml"))
+            {
+                while (sr.EndOfStream)
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(Personaggio));
+
+                    personaggi.Add((Personaggio)serializer.Deserialize(sr));
+                }
+            }
         }
         //inizio metodi bottoni--------------------------------------------------------------------------------
         // METODI CLICK PERSONAGGIO BLU
@@ -296,15 +297,15 @@ namespace Videogioco
 
         private void ControlloSelezione()
         {
-            if(nArmiBluScelte == 3)
+            if(nArmiBluScelte >= 3)
             {
                 ImpostaBottoni(false, 2);
             }
-            if(nArmiRosseScelte == 3)
+            if(nArmiRosseScelte >= 3)
             {
                 ImpostaBottoni(false, 4);
             }
-            if(nArmiBluScelte == 3 && nArmiRosseScelte == 3 && personaggioSceltoRosso != null && personaggioSceltoBlu != null)
+            if(nArmiBluScelte >= 3 && nArmiRosseScelte >= 3 && personaggioSceltoRosso != null && personaggioSceltoBlu != null)
             {
                 ImpostaBottoni(false, 0);
                 btnInizia.IsEnabled = true;
@@ -324,6 +325,7 @@ namespace Videogioco
                 }
                 ImpostaBottoni(false, 1);
             }
+            ControlloSelezione();
         }
 
         private void SceltaPersonaggioRosso(string nome)
@@ -339,66 +341,66 @@ namespace Videogioco
                 }
                 ImpostaBottoni(false, 3);
             }
+            ControlloSelezione();
         }
 
         private void sceltaArmaBlu(string nome,int n)
         {
-            if (nArmiBluScelte <= 3)
+            foreach (Arma armaScelta in armi)
             {
-                foreach (Arma armaScelta in armi)
+                if (armaScelta.Nome == nome)
                 {
-                    if (armaScelta.Nome == nome)
-                    {
-                        armiScelteBlu.Add(armaScelta);
-                    }
+                    armiScelteBlu.Add(armaScelta);
+                    nArmiBluScelte++;
                 }
-                IsEnabled = false;
-                ControlloSelezione();
-                if (n == 1)
-                { btnBA1.IsEnabled = false; }
-                else if (n == 2)
-                { btnBA2.IsEnabled = false; }
-                else if (n == 3)
-                { btnBA3.IsEnabled = false; }
-                else if (n == 4)
-                { btnBA4.IsEnabled = false; }
-                else if (n == 5)
-                { btnBA5.IsEnabled = false; }
-                else if (n == 6)
-                { btnBA6.IsEnabled = false; }
             }
+            nArmiBluScelte++;
+            ControlloSelezione();
+            if (n == 1)
+            { btnBA1.IsEnabled = false; }
+            else if (n == 2)
+            { btnBA2.IsEnabled = false; }
+            else if (n == 3)
+            { btnBA3.IsEnabled = false; }
+            else if (n == 4)
+            { btnBA4.IsEnabled = false; }
+            else if (n == 5)
+            { btnBA5.IsEnabled = false; }
+            else if (n == 6)
+            { btnBA6.IsEnabled = false; }
+
         }
 
         private void sceltaArmaRossa(string nome, int n)
         {
-            if (nArmiRosseScelte <= 3)
+            foreach (Arma armaScelta in armi)
             {
-                foreach (Arma armaScelta in armi)
+                if (armaScelta.Nome == nome)
                 {
-                    if (armaScelta.Nome == nome)
-                    {
-                        armiScelteRosso.Add(armaScelta);
-                    }
+                    armiScelteRosso.Add(armaScelta);
+                    nArmiRosseScelte++;
                 }
-                IsEnabled = false;
-                ControlloSelezione();
-                if(n==1)
-                { btnRA1.IsEnabled = false; }
-                else if(n ==2)
-                { btnRA2.IsEnabled = false; }
-                else if(n==3)
-                { btnRA3.IsEnabled = false; }
-                else if(n==4)
-                { btnRA4.IsEnabled = false; }
-                else if(n==5)
-                { btnRA5.IsEnabled = false; }
-                else if(n==6)
-                { btnRA6.IsEnabled = false; }
             }
+            nArmiRosseScelte++;
+            ControlloSelezione();
+            if (n == 1)
+            { btnRA1.IsEnabled = false; }
+            else if (n == 2)
+            { btnRA2.IsEnabled = false; }
+            else if (n == 3)
+            { btnRA3.IsEnabled = false; }
+            else if (n == 4)
+            { btnRA4.IsEnabled = false; }
+            else if (n == 5)
+            { btnRA5.IsEnabled = false; }
+            else if (n == 6)
+            { btnRA6.IsEnabled = false; }
+
+
 
 
         }
 
-        
+
     }
 }

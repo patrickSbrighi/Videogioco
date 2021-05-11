@@ -12,6 +12,10 @@ namespace Videogioco
         {
             _puntiFerita = puntiFerita;
         }
+        public ArmaDistanza()
+        {
+           
+        }
 
         public int PuntiFerita
         {

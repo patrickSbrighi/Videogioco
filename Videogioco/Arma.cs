@@ -14,12 +14,16 @@ namespace Videogioco
             _id = id;
             _nome = nome;
         }
+        public Arma()
+        {
+            
+        }
 
         public string Id
         {
             get
             {
-                return Id;
+                return _id;
             }
             set
             {
