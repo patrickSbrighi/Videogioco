@@ -25,27 +25,30 @@ namespace Videogioco
     {
         List<Arma> listaArmiDaSerializzare;
         ArmaDistanza arma;
+        ArmaVicino arma2;
         Personaggio personaggio;
         List<Personaggio> listaPersonaggiDaSerializzare;
         List<ArmaDistanza> listaArmiDistanza;
+        List<ArmaVicino> listaArmiVicino;
         public MainWindow()
         {
             InitializeComponent();
             listaArmiDaSerializzare = new List<Arma>();
             listaPersonaggiDaSerializzare = new List<Personaggio>();
             listaArmiDistanza = new List<ArmaDistanza>();
+            listaArmiVicino = new List<ArmaVicino>();
             arma = new ArmaDistanza(2000,"3242","arco");
             listaArmiDistanza.Add(arma);
             arma = new ArmaDistanza(300, "2434", "lancia");
             listaArmiDistanza.Add(arma);
-            //arma = new ArmaVicino(232, "6479", "guantone");
-            listaArmiDistanza.Add(arma);
+            arma2 = new ArmaVicino(232, "6479", "guantone");
+            listaArmiVicino.Add(arma2);
             arma = new ArmaDistanza(212, "5248", "balestra");
             listaArmiDistanza.Add(arma);
             arma = new ArmaDistanza(344, "7458", "fucile");
             listaArmiDistanza.Add(arma);
-            //arma = new ArmaVicino(400, "5437", "spada");
-            listaArmiDistanza.Add(arma);
+            arma2 = new ArmaVicino(400, "5437", "spada");
+            listaArmiVicino.Add(arma2);
             listaPersonaggiDaSerializzare = new List<Personaggio>();
             personaggio = new Personaggio("3245", "valkiria", 323, 354, 0);
             listaPersonaggiDaSerializzare.Add(personaggio);
@@ -60,19 +63,20 @@ namespace Videogioco
             personaggio = new Personaggio("3245", "ninja", 323, 354, 0);
             listaPersonaggiDaSerializzare.Add(personaggio);
 
-            ScriviFileArmi();
+            ScriviFileArmiDistanza();
+            ScriviFileArmiVicino();
             ScriviFilePersonaggi();
 
 
 
         }
 
-        public void ScriviFileArmi()
+        public void ScriviFileArmiDistanza()
         {
-            using (StreamWriter sr = new StreamWriter("Armi.xml"))
+            using (StreamWriter sr = new StreamWriter("ArmiDistanza.xml"))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(ArmaDistanza));
-                foreach (Arma a in listaArmiDistanza)
+                foreach (ArmaDistanza a in listaArmiDistanza)
                 {
 
                     serializer.Serialize(sr, a);
@@ -80,6 +84,20 @@ namespace Videogioco
                 }
             }
         }
+        public void ScriviFileArmiVicino()
+        {
+            using (StreamWriter sr = new StreamWriter("ArmiVicino.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(ArmaVicino));
+                foreach (ArmaVicino a in listaArmiVicino)
+                {
+
+                    serializer.Serialize(sr, a);
+
+                }
+            }
+        }
+        
         public void ScriviFilePersonaggi()
         {
             using (StreamWriter sr = new StreamWriter("Personaggi.xml"))

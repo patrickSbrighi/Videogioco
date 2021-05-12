@@ -53,18 +53,30 @@ namespace Videogioco
             ImpostaBottoni(true,0);
             sceltaPersPossibileRosso = true;
             sceltaPersPossibileBlu = true;
-            LeggiFileArmi();
+            LeggiFileArmiDistanza();
             LeggiFilePersonaggi();
         }
-        public void LeggiFileArmi()
+        public void LeggiFileArmiDistanza()
         {
-            using (StreamReader sr = new StreamReader("Armi.xml"))
+            using (StreamReader sr = new StreamReader("ArmiDistanza.xml"))
             {
                 while (sr.EndOfStream)
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Personaggio));
+                    XmlSerializer serializer = new XmlSerializer(typeof(ArmaDistanza));
 
-                    armi.Add((Arma)serializer.Deserialize(sr));
+                    armi.Add((ArmaDistanza)serializer.Deserialize(sr));
+                }
+            }
+        }
+        public void LeggiFileArmiVicino()
+        {
+            using (StreamReader sr = new StreamReader("ArmiVicino.xml"))
+            {
+                while (sr.EndOfStream)
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(ArmaVicino));
+
+                    armi.Add((ArmaVicino)serializer.Deserialize(sr));
                 }
             }
         }
@@ -352,23 +364,22 @@ namespace Videogioco
                 {
                     armiScelteBlu.Add(armaScelta);
                     nArmiBluScelte++;
+                    ControlloSelezione();
+                    if (n == 1)
+                    { btnBA1.IsEnabled = false; }
+                    else if (n == 2)
+                    { btnBA2.IsEnabled = false; }
+                    else if (n == 3)
+                    { btnBA3.IsEnabled = false; }
+                    else if (n == 4)
+                    { btnBA4.IsEnabled = false; }
+                    else if (n == 5)
+                    { btnBA5.IsEnabled = false; }
+                    else if (n == 6)
+                    { btnBA6.IsEnabled = false; }
                 }
             }
-            nArmiBluScelte++;
-            ControlloSelezione();
-            if (n == 1)
-            { btnBA1.IsEnabled = false; }
-            else if (n == 2)
-            { btnBA2.IsEnabled = false; }
-            else if (n == 3)
-            { btnBA3.IsEnabled = false; }
-            else if (n == 4)
-            { btnBA4.IsEnabled = false; }
-            else if (n == 5)
-            { btnBA5.IsEnabled = false; }
-            else if (n == 6)
-            { btnBA6.IsEnabled = false; }
-
+           
         }
 
         private void sceltaArmaRossa(string nome, int n)
@@ -379,26 +390,21 @@ namespace Videogioco
                 {
                     armiScelteRosso.Add(armaScelta);
                     nArmiRosseScelte++;
+                    ControlloSelezione();
+                    if (n == 1)
+                    { btnRA1.IsEnabled = false; }
+                    else if (n == 2)
+                    { btnRA2.IsEnabled = false; }
+                    else if (n == 3)
+                    { btnRA3.IsEnabled = false; }
+                    else if (n == 4)
+                    { btnRA4.IsEnabled = false; }
+                    else if (n == 5)
+                    { btnRA5.IsEnabled = false; }
+                    else if (n == 6)
+                    { btnRA6.IsEnabled = false; }
                 }
-            }
-            nArmiRosseScelte++;
-            ControlloSelezione();
-            if (n == 1)
-            { btnRA1.IsEnabled = false; }
-            else if (n == 2)
-            { btnRA2.IsEnabled = false; }
-            else if (n == 3)
-            { btnRA3.IsEnabled = false; }
-            else if (n == 4)
-            { btnRA4.IsEnabled = false; }
-            else if (n == 5)
-            { btnRA5.IsEnabled = false; }
-            else if (n == 6)
-            { btnRA6.IsEnabled = false; }
-
-
-
-
+            }            
         }
 
 
