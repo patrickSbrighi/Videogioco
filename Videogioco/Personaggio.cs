@@ -23,6 +23,11 @@ namespace Videogioco
             Esperienza = esperienza;
         }
 
+        public Personaggio()
+        {
+            
+        }
+
         public int LivelloSkin
         {
             get

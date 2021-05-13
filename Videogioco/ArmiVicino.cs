@@ -12,6 +12,10 @@ namespace Videogioco
         {
             PuntiFerita = puntiFerita;
         }
+        public ArmaVicino()
+        {
+            
+        }
 
         public int PuntiFerita
         {

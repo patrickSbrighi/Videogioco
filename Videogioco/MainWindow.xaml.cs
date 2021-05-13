@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace Videogioco
 {
@@ -22,9 +23,93 @@ namespace Videogioco
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Arma> listaArmiDaSerializzare;
+        ArmaDistanza arma;
+        ArmaVicino arma2;
+        Personaggio personaggio;
+        List<Personaggio> listaPersonaggiDaSerializzare;
+        List<ArmaDistanza> listaArmiDistanza;
+        List<ArmaVicino> listaArmiVicino;
         public MainWindow()
         {
             InitializeComponent();
+            listaArmiDaSerializzare = new List<Arma>();
+            listaPersonaggiDaSerializzare = new List<Personaggio>();
+            listaArmiDistanza = new List<ArmaDistanza>();
+            listaArmiVicino = new List<ArmaVicino>();
+            arma = new ArmaDistanza(2000,"3242","arco");
+            listaArmiDistanza.Add(arma);
+            arma = new ArmaDistanza(300, "2434", "lancia");
+            listaArmiDistanza.Add(arma);
+            arma2 = new ArmaVicino(232, "6479", "guantone");
+            listaArmiVicino.Add(arma2);
+            arma = new ArmaDistanza(212, "5248", "balestra");
+            listaArmiDistanza.Add(arma);
+            arma = new ArmaDistanza(344, "7458", "fucile");
+            listaArmiDistanza.Add(arma);
+            arma2 = new ArmaVicino(400, "5437", "spada");
+            listaArmiVicino.Add(arma2);
+            listaPersonaggiDaSerializzare = new List<Personaggio>();
+            personaggio = new Personaggio("3245", "valkiria", 323, 354, 0);
+            listaPersonaggiDaSerializzare.Add(personaggio);
+            personaggio = new Personaggio("3245", "maga", 323, 354, 0);
+            listaPersonaggiDaSerializzare.Add(personaggio);
+            personaggio = new Personaggio("3245", "marksman", 323, 354, 0);
+            listaPersonaggiDaSerializzare.Add(personaggio);
+            personaggio = new Personaggio("3245", "golem", 323, 354, 0);
+            listaPersonaggiDaSerializzare.Add(personaggio);
+            personaggio = new Personaggio("3245", "guerriero", 323, 354, 0);
+            listaPersonaggiDaSerializzare.Add(personaggio);
+            personaggio = new Personaggio("3245", "ninja", 323, 354, 0);
+            listaPersonaggiDaSerializzare.Add(personaggio);
+
+            ScriviFileArmiDistanza();
+            ScriviFileArmiVicino();
+            ScriviFilePersonaggi();
+
+
+
+        }
+
+        public void ScriviFileArmiDistanza()
+        {
+            using (StreamWriter sr = new StreamWriter("ArmiDistanza.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(ArmaDistanza));
+                foreach (ArmaDistanza a in listaArmiDistanza)
+                {
+
+                    serializer.Serialize(sr, a);
+                    
+                }
+            }
+        }
+        public void ScriviFileArmiVicino()
+        {
+            using (StreamWriter sr = new StreamWriter("ArmiVicino.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(ArmaVicino));
+                foreach (ArmaVicino a in listaArmiVicino)
+                {
+
+                    serializer.Serialize(sr, a);
+
+                }
+            }
+        }
+        
+        public void ScriviFilePersonaggi()
+        {
+            using (StreamWriter sr = new StreamWriter("Personaggi.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(Personaggio));
+                foreach (Personaggio p in listaPersonaggiDaSerializzare)
+                {
+
+                    serializer.Serialize(sr, p);
+
+                }
+            }
         }
 
         private const string FILE_REGOLE = ""; //TODO zutty pdf
