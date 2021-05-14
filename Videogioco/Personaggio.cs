@@ -14,13 +14,14 @@ namespace Videogioco
         private int _esperienza;
         private int _livelloSkin;
 
-        public Personaggio(string id, string nome, int pV, int pA, int esperienza)
+        public Personaggio(string id, string nome, int pV, int pA, int esperienza, int livelloSkin)
         {
             Id = id;
             Nome = nome;
             PuntiVita = pV;
             PuntiAttacco = pA;
             Esperienza = esperienza;
+            LivelloSkin = livelloSkin;
         }
 
         public Personaggio()
@@ -36,7 +37,7 @@ namespace Videogioco
             }
             set
             {
-                if(value == 1 || value == 2 || value == 3)
+                if(value >= 1 && value <=3)
                 {
                     _livelloSkin = value;
                 }

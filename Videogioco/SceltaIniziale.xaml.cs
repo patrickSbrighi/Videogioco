@@ -55,41 +55,52 @@ namespace Videogioco
             sceltaPersPossibileBlu = true;
             LeggiFileArmiDistanza();
             LeggiFilePersonaggi();
+            LeggiFileArmiVicino();
         }
         public void LeggiFileArmiDistanza()
         {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<ArmaDistanza>));
+            List<ArmaDistanza> lista = new List<ArmaDistanza>();
+
             using (StreamReader sr = new StreamReader("ArmiDistanza.xml"))
             {
-                while (sr.EndOfStream)
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(ArmaDistanza));
+                lista = (List<ArmaDistanza>)serializer.Deserialize(sr);
+                // armi.Add((ArmaDistanza)serializer.Deserialize(sr));
+            }
 
-                    armi.Add((ArmaDistanza)serializer.Deserialize(sr));
-                }
+            foreach(ArmaDistanza arma in lista)
+            {
+                armi.Add(arma);
             }
         }
         public void LeggiFileArmiVicino()
         {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<ArmaVicino>));
+            List<ArmaVicino> lista = new List<ArmaVicino>();
+
             using (StreamReader sr = new StreamReader("ArmiVicino.xml"))
             {
-                while (sr.EndOfStream)
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(ArmaVicino));
+                lista = (List<ArmaVicino>)serializer.Deserialize(sr);
+            }
 
-                    armi.Add((ArmaVicino)serializer.Deserialize(sr));
-                }
+            foreach (ArmaVicino arma in lista)
+            {
+                armi.Add(arma);
             }
         }
         public void LeggiFilePersonaggi()
         {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Personaggio>));
+            List<Personaggio> lista = new List<Personaggio>();
+
             using (StreamReader sr = new StreamReader("Personaggi.xml"))
             {
-                while (sr.EndOfStream)
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Personaggio));
+                lista = (List<Personaggio>)serializer.Deserialize(sr);
+            }
 
-                    personaggi.Add((Personaggio)serializer.Deserialize(sr));
-                }
+            foreach (Personaggio p in lista)
+            {
+                personaggi.Add(p);
             }
         }
         //inizio metodi bottoni--------------------------------------------------------------------------------
