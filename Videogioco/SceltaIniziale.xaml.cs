@@ -23,8 +23,8 @@ namespace Videogioco
     {
         private List<Arma> armi;// lista che contiene tutte le armi del gioco(variabile globale)
         private List<Personaggio> personaggi;//lista che contiene tutti i personaggi del gioco(variabile globale)
-        private List<Arma> armiScelteRosso;
-        private List<Arma> armiScelteBlu;
+        private Queue<Arma> armiScelteRosso;
+        private Queue<Arma> armiScelteBlu;
         private Personaggio personaggioSceltoBlu;
         private Personaggio personaggioSceltoRosso;
         private int nArmiBluScelte;
@@ -47,8 +47,8 @@ namespace Videogioco
             personaggioSceltoRosso = null;
             nArmiBluScelte = 0;
             nArmiRosseScelte = 0;
-            armiScelteRosso = new List<Arma>();
-            armiScelteBlu = new List<Arma>();
+            armiScelteRosso = new Queue<Arma>();
+            armiScelteBlu = new Queue<Arma>();
             btnInizia.IsEnabled = false;
             ImpostaBottoni(true,0);
             sceltaPersPossibileRosso = true;
@@ -232,6 +232,8 @@ namespace Videogioco
         //fine metodi bottoni--------------------------------------------------------------------------------
         private void btnInizia_Click(object sender, RoutedEventArgs e)
         {
+            utenteBlu = new Utente(personaggioSceltoBlu, armiScelteBlu, Squadre.Blu);
+            utenteRosso = new Utente(personaggioSceltoRosso, armiScelteRosso, Squadre.Rossa);
             Combattimento combattimento = new Combattimento(utenteRosso, utenteBlu);
             combattimento.Show();
             this.Close();
@@ -373,7 +375,7 @@ namespace Videogioco
             {
                 if (armaScelta.Nome == nome)
                 {
-                    armiScelteBlu.Add(armaScelta);
+                    armiScelteBlu.Enqueue(armaScelta);
                     nArmiBluScelte++;
                     ControlloSelezione();
                     if (n == 1)
@@ -399,7 +401,7 @@ namespace Videogioco
             {
                 if (armaScelta.Nome == nome)
                 {
-                    armiScelteRosso.Add(armaScelta);
+                    armiScelteRosso.Enqueue(armaScelta);
                     nArmiRosseScelte++;
                     ControlloSelezione();
                     if (n == 1)

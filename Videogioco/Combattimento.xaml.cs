@@ -43,6 +43,8 @@ namespace Videogioco
             progressRosso.Maximum = _rosso.VitaUtente;
             progressBlu.Value = progressBlu.Maximum;
             progressRosso.Value = progressRosso.Maximum;
+            _campi = new List<Campo>();
+            LeggiFileCampi();
             RandomCampo();
             btnSessione.Visibility = Visibility.Hidden;
             _rosso.CalcoloSource();
@@ -142,14 +144,17 @@ namespace Videogioco
 
         private void LeggiFileCampi()
         {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Campo>));
+            List<Campo> lista = new List<Campo>();
+
             using (StreamReader sr = new StreamReader("Campi.xml"))
             {
-                while (sr.EndOfStream)
-                {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Campo));
+                lista = (List<Campo>)serializer.Deserialize(sr);
+            }
 
-                    _campi.Add((Campo)serializer.Deserialize(sr));
-                }
+            foreach (Campo c in lista)
+            {
+                _campi.Add(c);
             }
         }
 

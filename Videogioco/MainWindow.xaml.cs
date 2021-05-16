@@ -30,12 +30,14 @@ namespace Videogioco
         List<Personaggio> listaPersonaggiDaSerializzare;
         List<ArmaDistanza> listaArmiDistanza;
         List<ArmaVicino> listaArmiVicino;
+        List<Campo> listaCampi;
         public MainWindow()
         {
             InitializeComponent();
             listaArmiDaSerializzare = new List<Arma>();
             listaPersonaggiDaSerializzare = new List<Personaggio>();
             listaArmiDistanza = new List<ArmaDistanza>();
+            listaCampi = new List<Campo>();
             listaArmiVicino = new List<ArmaVicino>();
             arma = new ArmaDistanza(2000,"3242","arco");
             listaArmiDistanza.Add(arma);
@@ -68,6 +70,16 @@ namespace Videogioco
             ScriviFilePersonaggi();
 
 
+            Campo c1 = new Campo("1", "/Personaggi Videogioco/Sfondi/Campo1.png");
+            Campo c2 = new Campo("2", "/Personaggi Videogioco/Sfondi/Campo2.jpg");
+            Campo c3 = new Campo("3", "/Personaggi Videogioco/Sfondi/Campo3.jpg");
+
+            listaCampi.Add(c1);
+            listaCampi.Add(c2);
+            listaCampi.Add(c3);
+
+            ScriviFileCampi();
+
 
         }
 
@@ -84,6 +96,22 @@ namespace Videogioco
                 }*/
 
                 serializer.Serialize(sr, listaArmiDistanza);
+            }
+        }
+
+        public void ScriviFileCampi()
+        {
+            using (StreamWriter sr = new StreamWriter("Campi.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Campo>));
+                /*foreach (ArmaDistanza a in listaArmiDistanza)
+                {
+
+                    serializer.Serialize(sr, a);
+                    
+                }*/
+
+                serializer.Serialize(sr, listaCampi);
             }
         }
         public void ScriviFileArmiVicino()

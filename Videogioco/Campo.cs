@@ -11,15 +11,17 @@ namespace Videogioco
         string _source;
         public Campo(string id, string source)
         {
-            _id = id;
-            _source = source;
+            Id = id;
+            Source = source;
         }
+
+        public Campo() { }
 
         public string Id
         {
             get
             {
-                return Id;
+                return _id;
             }
             set
             {
