@@ -21,7 +21,7 @@ namespace Videogioco
             set;
         }
 
-        public Duello(ref Utente utenteBlu, ref Utente utenteRosso, int round = 1)
+        public Duello(Utente utenteBlu, Utente utenteRosso, int round = 1)
         {
             UtenteBlu = utenteBlu;
             UtenteRosso = utenteRosso;

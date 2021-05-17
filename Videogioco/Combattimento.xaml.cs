@@ -23,41 +23,40 @@ namespace Videogioco
     public partial class Combattimento : Window
     {
         private List<Campo> _campi;
-        //private int _nRound;
-        private Utente _rosso;
-        private Utente _blu;
         private string _idUltimoCampoScelto;
 
-        public Combattimento(Utente Rosso, Utente Blu)
+        public Combattimento(Utente rosso, Utente blu)
         {
             InitializeComponent();
-            _rosso = Rosso;
-            _blu = Blu;
-            _duello = new Duello(ref _rosso, ref _blu);
+            duello = new Duello(rosso, blu);
             InizializzazioneElementi();
         }
 
         private void InizializzazioneElementi()
         {
-            progressBlu.Maximum = _blu.VitaUtente;
-            progressRosso.Maximum = _rosso.VitaUtente;
+            progressBlu.Maximum = duello.UtenteBlu.VitaUtente;
+            progressRosso.Maximum = duello.UtenteRosso.VitaUtente;
             progressBlu.Value = progressBlu.Maximum;
             progressRosso.Value = progressRosso.Maximum;
             _campi = new List<Campo>();
             LeggiFileCampi();
             RandomCampo();
             btnSessione.Visibility = Visibility.Hidden;
-            _rosso.CalcoloSource();
-            _blu.CalcoloSource();
-            imgBlu.Source = new BitmapImage(new Uri (_blu.SourcePersonaggio));
-            imgRosso.Source = new BitmapImage(new Uri(_rosso.SourcePersonaggio));
-            
-            
+            duello.UtenteRosso.CalcoloSource();
+            duello.UtenteBlu.CalcoloSource();
+            imgBlu.Source = new BitmapImage(new Uri (duello.UtenteBlu.SourcePersonaggio, UriKind.Relative));
+            imgRosso.Source = new BitmapImage(new Uri(duello.UtenteRosso.SourcePersonaggio, UriKind.Relative));
+
+
             //imgArmaBlu.Source = new BitmapImage(new Uri(_blu.Armi.Peek.SourceArma);
             //imgArmaRossa.Source = new BitmapImage(new Uri(_rosso.Armi.Peek.SourceArma));
+            /*Uri a = new Uri(p, UriKind.Relative);
+            ImageSource b = new BitmapImage(a);
+            img.Source = b;*/
+
         }
 
-        private Duello _duello
+        private Duello duello
         {
             get;
             set;
@@ -65,10 +64,10 @@ namespace Videogioco
 
         public void SparaRosso()
         {
-            _duello.SparaRosso();
-            progressBlu.Value = _blu.VitaUtente;
+            duello.SparaRosso();
+            progressBlu.Value = duello.UtenteBlu.VitaUtente;
 
-            string vincitore = _duello.ControllaVittoria();
+            string vincitore = duello.ControllaVittoria();
 
             if (vincitore != "Nan")
                 Vittoria(vincitore);
@@ -76,25 +75,25 @@ namespace Videogioco
 
         public void SparaBlu()
         {
-            _duello.SparaBlu();
-            progressRosso.Value = _rosso.VitaUtente;
+            duello.SparaBlu();
+            progressRosso.Value = duello.UtenteRosso.VitaUtente;
         }
 
         public void SchivaRosso()
         {
-            _duello.SchivaRosso();
+            duello.SchivaRosso();
         }
 
         public void SchivaBlu()
         {
-            _duello.SchivaBlu();
+            duello.SchivaBlu();
         }
 
         
         public void RandomCampo()
         {
             Random rand = new Random();
-            int nScelto = rand.Next(0, 5);
+            int nScelto = rand.Next(0, 3);
             Campo campo = _campi[nScelto];
             _idUltimoCampoScelto = campo.Id;
 
@@ -106,7 +105,7 @@ namespace Videogioco
 
         private void NuovoRound()
         {
-            _duello.NuovoRound();
+            duello.NuovoRound();
             InizializzazioneElementi();
         }
 
@@ -163,7 +162,7 @@ namespace Videogioco
             lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
             btnSessione.Visibility = Visibility.Visible;
 
-            if (_duello.RoundCorrente != 3)
+            if (duello.RoundCorrente != 3)
                 btnSessione.Content = "Prossimo round";
             else
                 btnSessione.Content = "Home";
@@ -173,7 +172,7 @@ namespace Videogioco
         {
             btnSessione.Visibility = Visibility.Hidden;
 
-            if (_duello.RoundCorrente != 3)
+            if (duello.RoundCorrente != 3)
                 NuovoRound();
             else
                 TornaHome();

@@ -103,7 +103,7 @@ namespace Videogioco
         public void CalcoloSource()
         {
             Personaggio.CalcolaSkin();
-            if (_squadra == Squadre.Rossa)
+            if (Squadra == Squadre.Rossa)
             {
                 if (Personaggio.LivelloSkin == 1)
                 {
@@ -187,7 +187,7 @@ namespace Videogioco
                     }
                 }
             }
-            else if (_squadra == Squadre.Blu)
+            else if (Squadra == Squadre.Blu)
             {
                 if (Personaggio.LivelloSkin == 1)
                 {
