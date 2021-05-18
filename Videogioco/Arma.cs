@@ -9,10 +9,12 @@ namespace Videogioco
     {
         string _id;
         string _nome;
-        public Arma(string id, string nome)
+        int _puntiFerita;
+        public Arma(string id, string nome, int puntiFerita)
         {
             _id = id;
             _nome = nome;
+            _puntiFerita = puntiFerita;
         }
         public Arma()
         {
@@ -45,6 +47,19 @@ namespace Videogioco
                 if (value != "")
                 {
                     _nome = value;
+                }
+            }
+        }
+
+        public int PuntiFerita
+        {
+            get
+            { return _puntiFerita; }
+            set
+            {
+                if (value > 0)
+                {
+                    _puntiFerita = value;
                 }
             }
         }

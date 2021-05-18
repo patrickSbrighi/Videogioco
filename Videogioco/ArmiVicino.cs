@@ -7,27 +7,9 @@ namespace Videogioco
 {
     public class ArmaVicino : Arma
     {
-        int _puntiFerita;
-        public ArmaVicino(int puntiFerita, string id, string nome) : base(id, nome)
-        {
-            PuntiFerita = puntiFerita;
-        }
-        public ArmaVicino()
-        {
-            
-        }
+        //Classe tenuta per una divisione mentale delle armi e per eventuali sviluppi futuri con movimento e animazione del colpo
+        public ArmaVicino(int puntiFerita, string id, string nome) : base(id, nome, puntiFerita) { }
 
-        public int PuntiFerita
-        {
-            get
-            { return _puntiFerita; }
-            set
-            {
-                if (value > 0)
-                {
-                    _puntiFerita = value;
-                }
-            }
-        }
+        public ArmaVicino() { }
     }
 }

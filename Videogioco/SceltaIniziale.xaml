@@ -81,8 +81,6 @@
         <Button x:Name="btnRP1"  HorizontalAlignment="Left" Margin="726,56,0,0" VerticalAlignment="Top" Width="57" Height="56" Background="#FFF6F6F6" Click="btnRP1_Click">
             <Image Source="/Personaggi Videogioco/Personaggi Rossi/Valkiria rosso.png"/>
         </Button>
-        <Label Content="Blu" HorizontalAlignment="Left" Margin="624,18,0,0" VerticalAlignment="Top" Width="161"/>
-        <Label Content="Rosso" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="161"/>
         <Button x:Name="btnInizia" Content="Inizia" HorizontalAlignment="Left" Margin="334,283,0,0" VerticalAlignment="Top" Width="109" Height="46" Click="btnInizia_Click"/>
 
 

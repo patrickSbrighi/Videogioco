@@ -45,8 +45,8 @@ namespace Videogioco
             if (UtenteRosso.Carico && !UtenteBlu.Schivato)
             {
                 Random rand = new Random();
-                int dannoColpo = rand.Next(1, 4);
-                UtenteBlu.VitaUtente -= (UtenteRosso.PuntiAttacco + dannoColpo + ColpoCritico());
+                int dannoColpo = rand.Next(1, 8);
+                UtenteBlu.VitaUtente -= (UtenteRosso.PuntiAttacco + dannoColpo + ColpoCritico() + UtenteRosso.Armi.Peek().PuntiFerita);
                 UtenteRosso.Carico = false;
                 Thread ricarica = new Thread(new ThreadStart(RicaricaRosso));
                 ricarica.Start();
@@ -58,8 +58,8 @@ namespace Videogioco
             if (UtenteBlu.Carico && !UtenteRosso.Schivato)
             {
                 Random rand = new Random();
-                int dannoColpo = rand.Next(1, 4);
-                UtenteRosso.VitaUtente -= (UtenteBlu.PuntiAttacco + dannoColpo + ColpoCritico());
+                int dannoColpo = rand.Next(1, 8);
+                UtenteRosso.VitaUtente -= (UtenteBlu.PuntiAttacco + dannoColpo + ColpoCritico() + UtenteBlu.Armi.Peek().PuntiFerita);
                 UtenteBlu.Carico = false;
                 Thread ricarica = new Thread(new ThreadStart(RicaricaBlu));
                 ricarica.Start();
@@ -120,7 +120,7 @@ namespace Videogioco
             UtenteRosso.VitaUtente = UtenteRosso.Personaggio.PuntiVita;
 
             UtenteBlu.CambioArma();
-            UtenteBlu.CambioArma();
+            UtenteRosso.CambioArma();
 
             RoundCorrente++;
         }

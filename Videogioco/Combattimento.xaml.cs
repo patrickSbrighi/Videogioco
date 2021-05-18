@@ -38,15 +38,24 @@ namespace Videogioco
             progressRosso.Maximum = duello.UtenteRosso.VitaUtente;
             progressBlu.Value = progressBlu.Maximum;
             progressRosso.Value = progressRosso.Maximum;
+
             _campi = new List<Campo>();
             LeggiFileCampi();
             RandomCampo();
             btnSessione.Visibility = Visibility.Hidden;
+
             duello.UtenteRosso.CalcoloSource();
             duello.UtenteBlu.CalcoloSource();
-            imgBlu.Source = new BitmapImage(new Uri (duello.UtenteBlu.SourcePersonaggio, UriKind.Relative));
-            imgRosso.Source = new BitmapImage(new Uri(duello.UtenteRosso.SourcePersonaggio, UriKind.Relative));
 
+            Uri uriBlu = new Uri(duello.UtenteBlu.SourcePersonaggio, UriKind.Relative);
+            ImageSource sourceBlu = new BitmapImage(uriBlu);
+            imgBlu.Source = sourceBlu;
+
+            Uri uriRosso = new Uri(duello.UtenteRosso.SourcePersonaggio, UriKind.Relative);
+            ImageSource sourceRosso = new BitmapImage(uriRosso);
+            imgRosso.Source = sourceRosso;
+
+            lblVincitore.Content = "";
 
             //imgArmaBlu.Source = new BitmapImage(new Uri(_blu.Armi.Peek.SourceArma);
             //imgArmaRossa.Source = new BitmapImage(new Uri(_rosso.Armi.Peek.SourceArma));
@@ -77,6 +86,11 @@ namespace Videogioco
         {
             duello.SparaBlu();
             progressRosso.Value = duello.UtenteRosso.VitaUtente;
+
+            string vincitore = duello.ControllaVittoria();
+
+            if (vincitore != "Nan")
+                Vittoria(vincitore);
         }
 
         public void SchivaRosso()

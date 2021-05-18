@@ -118,9 +118,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pexels-irina-iriser-1366957.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="sfondopng.png" />
   </ItemGroup>
   <ItemGroup>

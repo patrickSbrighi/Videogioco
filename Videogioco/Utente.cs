@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace Videogioco
 {
@@ -57,10 +58,16 @@ namespace Videogioco
             set;
         }
 
+        private string _sourcePersonaggio;
         public string SourcePersonaggio
         {
-            get;
-            private set;
+            get => _sourcePersonaggio;
+            private set
+            {
+                if (String.IsNullOrWhiteSpace(value))
+                    throw new Exception("Valore source non valido");
+                _sourcePersonaggio = value;
+            }
         }
 
         public bool Schivato
@@ -107,81 +114,81 @@ namespace Videogioco
             {
                 if (Personaggio.LivelloSkin == 1)
                 {
-                    if (Personaggio.Nome == "Golem")
+                    if (Personaggio.Nome == "golem")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 1.png";
                     }
-                    else if (Personaggio.Nome == "Guerriero")
+                    else if (Personaggio.Nome == "guerriero")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 1.png";
                     }
-                    else if (Personaggio.Nome == "Maga")
+                    else if (Personaggio.Nome == "maga")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 1.png";
                     }
-                    else if (Personaggio.Nome == "Marksman")
+                    else if (Personaggio.Nome == "marksman")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 1.png";
                     }
-                    else if (Personaggio.Nome == "Ninja")
+                    else if (Personaggio.Nome == "ninja")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 1.png";
                     }
-                    else if (Personaggio.Nome == "Valkiria")
+                    else if (Personaggio.Nome == "valkiria")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 1.png";
                     }
                 }
                 else if (Personaggio.LivelloSkin == 2)
                 {
-                    if (Personaggio.Nome == "Golem")
+                    if (Personaggio.Nome == "golem")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 2.png";
                     }
-                    else if (Personaggio.Nome == "Guerriero")
+                    else if (Personaggio.Nome == "guerriero")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 2.png";
                     }
-                    else if (Personaggio.Nome == "Maga")
+                    else if (Personaggio.Nome == "maga")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 2.png";
                     }
-                    else if (Personaggio.Nome == "Marksman")
+                    else if (Personaggio.Nome == "marksman")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 2.png";
                     }
-                    else if (Personaggio.Nome == "Ninja")
+                    else if (Personaggio.Nome == "ninja")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 2.png";
                     }
-                    else if (Personaggio.Nome == "Valkiria")
+                    else if (Personaggio.Nome == "valkiria")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 2.png";
                     }
                 }
                 else if (Personaggio.LivelloSkin == 3)
                 {
-                    if (Personaggio.Nome == "Golem")
+                    if (Personaggio.Nome == "golem")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 3.png";
                     }
-                    else if (Personaggio.Nome == "Guerriero")
+                    else if (Personaggio.Nome == "guerriero")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 3.png";
                     }
-                    else if (Personaggio.Nome == "Maga")
+                    else if (Personaggio.Nome == "maga")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 3.png";
                     }
-                    else if (Personaggio.Nome == "Marksman")
+                    else if (Personaggio.Nome == "marksman")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 3.png";
                     }
-                    else if (Personaggio.Nome == "Ninja")
+                    else if (Personaggio.Nome == "ninja")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 3.png";
                     }
-                    else if (Personaggio.Nome == "Valkiria")
+                    else if (Personaggio.Nome == "valkiria")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 3.png";
                     }
@@ -191,81 +198,81 @@ namespace Videogioco
             {
                 if (Personaggio.LivelloSkin == 1)
                 {
-                    if (Personaggio.Nome == "Golem")
+                    if (Personaggio.Nome == "golem")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 1.png";
                     }
-                    else if (Personaggio.Nome == "Guerriero")
+                    else if (Personaggio.Nome == "guerriero")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 1.png";
                     }
-                    else if (Personaggio.Nome == "Maga")
+                    else if (Personaggio.Nome == "maga")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 1.png";
                     }
-                    else if (Personaggio.Nome == "Marksman")
+                    else if (Personaggio.Nome == "marksman")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman blu 1.png";
                     }
-                    else if (Personaggio.Nome == "Ninja")
+                    else if (Personaggio.Nome == "ninja")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 1.png";
                     }
-                    else if (Personaggio.Nome == "Valkiria")
+                    else if (Personaggio.Nome == "valkiria")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 1.png";
                     }
                 }
                 else if (Personaggio.LivelloSkin == 2)
                 {
-                    if (Personaggio.Nome == "Golem")
+                    if (Personaggio.Nome == "golem")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 2.png";
                     }
-                    else if (Personaggio.Nome == "Guerriero")
+                    else if (Personaggio.Nome == "guerriero")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 2.png";
                     }
-                    else if (Personaggio.Nome == "Maga")
+                    else if (Personaggio.Nome == "maga")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 2.png";
                     }
-                    else if (Personaggio.Nome == "Marksman")
+                    else if (Personaggio.Nome == "marksman")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman roblusso 2.png";
                     }
-                    else if (Personaggio.Nome == "Ninja")
+                    else if (Personaggio.Nome == "ninja")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 2.png";
                     }
-                    else if (Personaggio.Nome == "Valkiria")
+                    else if (Personaggio.Nome == "valkiria")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 2.png";
                     }
                 }
                 else if (Personaggio.LivelloSkin == 3)
                 {
-                    if (Personaggio.Nome == "Golem")
+                    if (Personaggio.Nome == "golem")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 3.png";
                     }
-                    else if (Personaggio.Nome == "Guerriero")
+                    else if (Personaggio.Nome == "guerriero")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 3.png";
                     }
-                    else if (Personaggio.Nome == "Maga")
+                    else if (Personaggio.Nome == "maga")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 3.png";
                     }
-                    else if (Personaggio.Nome == "Marksman")
+                    else if (Personaggio.Nome == "marksman")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman blu 3.png";
                     }
-                    else if (Personaggio.Nome == "Ninja")
+                    else if (Personaggio.Nome == "ninja")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 3.png";
                     }
-                    else if (Personaggio.Nome == "Valkiria")
+                    else if (Personaggio.Nome == "valkiria")
                     {
                         SourcePersonaggio = "/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 3.png";
                     }
