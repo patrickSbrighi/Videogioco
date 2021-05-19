@@ -107,10 +107,10 @@ namespace Videogioco
         {
             //Il colpo critico avviene solo se il random è uguale a 1
             Random rand = new Random();
-            int scelta = rand.Next(1, 51);
+            int scelta = rand.Next(1, 41);
 
             if (scelta == 1)
-                return 50;
+                return 37;
             return 0;
         }
 

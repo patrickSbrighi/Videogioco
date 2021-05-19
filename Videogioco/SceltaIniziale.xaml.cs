@@ -362,6 +362,7 @@ namespace Videogioco
                     if (personaggioScelto.Nome == nome)
                     {
                         personaggioSceltoRosso = personaggioScelto;
+                        break;
                     }
                 }
                 ImpostaBottoni(false, 3);

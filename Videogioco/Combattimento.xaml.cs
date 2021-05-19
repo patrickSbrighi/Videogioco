@@ -24,6 +24,7 @@ namespace Videogioco
     {
         private List<Campo> _campi;
         private string _idUltimoCampoScelto;
+        private bool _finitoRound;
 
         public Combattimento(Utente rosso, Utente blu)
         {
@@ -38,6 +39,7 @@ namespace Videogioco
             progressRosso.Maximum = duello.UtenteRosso.VitaUtente;
             progressBlu.Value = progressBlu.Maximum;
             progressRosso.Value = progressRosso.Maximum;
+            _finitoRound = false;
 
             _campi = new List<Campo>();
             LeggiFileCampi();
@@ -54,6 +56,8 @@ namespace Videogioco
             Uri uriRosso = new Uri(duello.UtenteRosso.SourcePersonaggio, UriKind.Relative);
             ImageSource sourceRosso = new BitmapImage(uriRosso);
             imgRosso.Source = sourceRosso;
+            imgBlu.Visibility = Visibility.Visible;
+            imgRosso.Visibility = Visibility.Visible;
 
             lblVincitore.Content = "";
 
@@ -137,21 +141,24 @@ namespace Videogioco
         */
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.A)
+            if (!_finitoRound)
             {
-                SchivaBlu();
-            }
-            else if(e.Key == Key.D)
-            {
-                SparaBlu();
-            }
-            else if (e.Key == Key.Right)
-            {
-                SchivaRosso();
-            }
-            else if (e.Key == Key.Left)
-            {
-                SparaRosso();
+                if (e.Key == Key.A)
+                {
+                    SchivaBlu();
+                }
+                else if (e.Key == Key.D)
+                {
+                    SparaBlu();
+                }
+                else if (e.Key == Key.Right)
+                {
+                    SchivaRosso();
+                }
+                else if (e.Key == Key.Left)
+                {
+                    SparaRosso();
+                }
             }
         }
 
@@ -177,9 +184,14 @@ namespace Videogioco
             btnSessione.Visibility = Visibility.Visible;
 
             if (duello.RoundCorrente != 3)
+            {
+                _finitoRound = true;
                 btnSessione.Content = "Prossimo round";
-            else
+            }
+            else 
+            {
                 btnSessione.Content = "Home";
+            }
         }
 
         private void btnSessione_Click(object sender, RoutedEventArgs e)

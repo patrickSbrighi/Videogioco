@@ -162,5 +162,8 @@
     <Resource Include="Personaggi Videogioco\Armi rosso\lancia rosso.png" />
     <Resource Include="Personaggi Videogioco\Armi rosso\spada rosso.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Marksman rosso 1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

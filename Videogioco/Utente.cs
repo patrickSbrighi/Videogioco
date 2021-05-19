@@ -32,7 +32,10 @@ namespace Videogioco
         private Squadre _squadra;
         public Squadre Squadra
         {
-            get => default;
+            get
+            {
+                return _squadra;
+            }
             set
             {
                 if (value == Squadre.Rossa || value == Squadre.Blu)
@@ -61,7 +64,10 @@ namespace Videogioco
         private string _sourcePersonaggio;
         public string SourcePersonaggio
         {
-            get => _sourcePersonaggio;
+            get
+            {
+                return _sourcePersonaggio;
+            }
             private set
             {
                 if (String.IsNullOrWhiteSpace(value))
@@ -79,7 +85,10 @@ namespace Videogioco
         private int _vitaUtente;
         public int VitaUtente
         {
-            get => _vitaUtente;
+            get
+            {
+                return _vitaUtente;
+            }
             set
             {
                 // _vitaUtente = Personaggio.PuntiVita;
