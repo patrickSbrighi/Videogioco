@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marksman%20rosso%201.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/campo1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/campo2.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/campo3.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/home.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/sfondopng.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/vs.png")]
 
 
