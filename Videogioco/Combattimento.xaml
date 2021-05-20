@@ -22,8 +22,11 @@
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <Label x:Name="lblVincitore" Content="Ha vinto il giocatore rosso" HorizontalAlignment="Left" Height="104" Margin="0,31,0,0" VerticalAlignment="Top" Width="792" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="48"/>
-        <Button x:Name="btnSessione" Content="Prossimo round" HorizontalAlignment="Left" Height="159" Margin="241,169,0,0" VerticalAlignment="Top" Width="306" FontSize="36" Click="btnSessione_Click" Background="#FF84FF2F" FontFamily="Alef"/>
+        <Label x:Name="lblVincitoreRound" Content="Round numero 1" HorizontalAlignment="Left" Height="104" Margin="0,31,0,0" VerticalAlignment="Top" Width="792" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="48"/>
+        <Button x:Name="btnSessione" Content="Prossimo round" HorizontalAlignment="Left" Height="159" Margin="241,234,0,0" VerticalAlignment="Top" Width="306" FontSize="36" Click="btnSessione_Click" Background="#FF84FF2F" FontFamily="Alef"/>
+        <Label x:Name="lblVincitorePartita" Content="Vince la partita: Rosso" HorizontalAlignment="Left" Margin="213,140,0,0" VerticalAlignment="Top" Height="68" Width="362" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="36"/>
+        <Label x:Name="lblRoundVintiBlu" Content="0" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top" Height="63" Width="33" FontSize="36" Background="#FF00F3FF"/>
+        <Label x:Name="lblRoundVintiRosso" Content="0" HorizontalAlignment="Left" Margin="751,348,0,0" VerticalAlignment="Top" Height="63" Width="33" FontSize="36" Background="#FFFF6666"/>
 
     </Grid>
 </Window>

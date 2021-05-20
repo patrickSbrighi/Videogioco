@@ -27,12 +27,17 @@ namespace Videogioco
         private string _idUltimoCampoScelto;
         private bool _finitoRound;
         private const int NUMERO_ROUND_TOTALE = 3;
+        private int _roundVintiBlu;
+        private int _roundVintiRosso;
+        private string _vincitorePartita;
 
         public Combattimento(Utente rosso, Utente blu)
         {
             InitializeComponent();
             duello = new Duello(rosso, blu);
             InizializzazioneElementi();
+            _roundVintiRosso = 0;
+            _roundVintiBlu = 0;
         }
 
         private void InizializzazioneElementi()
@@ -59,7 +64,8 @@ namespace Videogioco
             ImageSource sourceRosso = new BitmapImage(uriRosso);
             imgRosso.Source = sourceRosso;
 
-            lblVincitore.Content = "";
+            lblVincitoreRound.Content = "";
+            lblVincitorePartita.Content = "";
         }
 
         private Duello duello
@@ -188,10 +194,19 @@ namespace Videogioco
             }
         }
 
-        private void Vittoria(string vincitore)
+        private void Vittoria(string vincitoreRound)
         {
-            lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
+            lblVincitoreRound.Content = "Il vincitore del round " + duello.RoundCorrente +" è: "+ vincitoreRound;
             btnSessione.Visibility = Visibility.Visible;
+            if(vincitoreRound == "Rosso")
+            {
+                _roundVintiRosso++;
+            }else if(vincitoreRound == "Blu")
+            {
+                _roundVintiBlu++;
+            }
+            lblRoundVintiRosso.Content = _roundVintiRosso;
+            lblRoundVintiBlu.Content = _roundVintiBlu;
 
             if (duello.RoundCorrente != 3)
             {
@@ -201,6 +216,14 @@ namespace Videogioco
             else 
             {
                 btnSessione.Content = "Home";
+                if(_roundVintiBlu > _roundVintiRosso)
+                {
+                    _vincitorePartita = "Blu";
+                }else if(_roundVintiRosso > _roundVintiBlu)
+                {
+                    _vincitorePartita = "Rosso";
+                }
+                lblVincitorePartita.Content = "Vince la partita: " + _vincitorePartita;
             }
         }
 

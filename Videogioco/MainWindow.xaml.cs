@@ -33,8 +33,8 @@ namespace Videogioco
         List<Campo> listaCampi;
         public MainWindow()
         {
-            InitializeComponent();
-            listaArmiDaSerializzare = new List<Arma>();
+            InitializeComponent();/*
+            listaArmiDaSerializzare = new List<Arma>(); 
             listaPersonaggiDaSerializzare = new List<Personaggio>();
             listaArmiDistanza = new List<ArmaDistanza>();
             listaCampi = new List<Campo>();
@@ -80,7 +80,7 @@ namespace Videogioco
 
             ScriviFileCampi();
 
-
+            */
         }
 
         public void ScriviFileArmiDistanza()
@@ -88,12 +88,6 @@ namespace Videogioco
             using (StreamWriter sr = new StreamWriter("ArmiDistanza.xml"))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<ArmaDistanza>));
-                /*foreach (ArmaDistanza a in listaArmiDistanza)
-                {
-
-                    serializer.Serialize(sr, a);
-                    
-                }*/
 
                 serializer.Serialize(sr, listaArmiDistanza);
             }
@@ -104,12 +98,6 @@ namespace Videogioco
             using (StreamWriter sr = new StreamWriter("Campi.xml"))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Campo>));
-                /*foreach (ArmaDistanza a in listaArmiDistanza)
-                {
-
-                    serializer.Serialize(sr, a);
-                    
-                }*/
 
                 serializer.Serialize(sr, listaCampi);
             }
