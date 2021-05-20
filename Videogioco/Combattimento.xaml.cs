@@ -23,8 +23,10 @@ namespace Videogioco
     public partial class Combattimento : Window
     {
         private List<Campo> _campi;
+        private List<Campo> _campiDisponibili;
         private string _idUltimoCampoScelto;
         private bool _finitoRound;
+        private const int NUMERO_ROUND_TOTALE = 3;
 
         public Combattimento(Utente rosso, Utente blu)
         {
@@ -56,17 +58,8 @@ namespace Videogioco
             Uri uriRosso = new Uri(duello.UtenteRosso.SourcePersonaggio, UriKind.Relative);
             ImageSource sourceRosso = new BitmapImage(uriRosso);
             imgRosso.Source = sourceRosso;
-            imgBlu.Visibility = Visibility.Visible;
-            imgRosso.Visibility = Visibility.Visible;
 
             lblVincitore.Content = "";
-
-            //imgArmaBlu.Source = new BitmapImage(new Uri(_blu.Armi.Peek.SourceArma);
-            //imgArmaRossa.Source = new BitmapImage(new Uri(_rosso.Armi.Peek.SourceArma));
-            /*Uri a = new Uri(p, UriKind.Relative);
-            ImageSource b = new BitmapImage(a);
-            img.Source = b;*/
-
         }
 
         private Duello duello
@@ -110,14 +103,31 @@ namespace Videogioco
         
         public void RandomCampo()
         {
-            Random rand = new Random();
-            int nScelto = rand.Next(0, 3);
-            Campo campo = _campi[nScelto];
-            _idUltimoCampoScelto = campo.Id;
+            if(duello.RoundCorrente == 1) //se è il primo round carico un campo casuale
+            {
+                Random rand = new Random();
+                int nScelto = rand.Next(0, NUMERO_ROUND_TOTALE);
+                Campo campo = _campi[nScelto];
+                _idUltimoCampoScelto = campo.Id;
+                _campiDisponibili = _campi;
+                _campiDisponibili.Remove(campo);
 
-            Uri a = new Uri(campo.Source, UriKind.Relative);
-            ImageSource b = new BitmapImage(a);
-            imgSfondo.Source = b;
+                Uri a = new Uri(campo.Source, UriKind.Relative);
+                ImageSource b = new BitmapImage(a);
+                imgSfondo.Source = b;
+            }
+            else
+            {
+                Random rand = new Random();
+                int nScelto = rand.Next(0, NUMERO_ROUND_TOTALE - duello.RoundCorrente);
+                Campo campo = _campiDisponibili[nScelto];
+                _idUltimoCampoScelto = campo.Id;
+                _campiDisponibili.Remove(campo);
+
+                Uri a = new Uri(campo.Source, UriKind.Relative);
+                ImageSource b = new BitmapImage(a);
+                imgSfondo.Source = b;
+            }
 
         }
 

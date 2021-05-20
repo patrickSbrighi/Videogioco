@@ -102,3 +102,12 @@ C:\Users\simone.gramellini\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Vide
 C:\Users\simone.gramellini\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Videogioco.csproj.CoreCompileInputs.cache
 C:\Users\simone.gramellini\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Videogioco.exe
 C:\Users\simone.gramellini\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Videogioco.pdb
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\bin\Debug\Videogioco.exe.config
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\bin\Debug\Videogioco.exe
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\bin\Debug\Videogioco.pdb
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Combattimento.baml
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\obj\Debug\MainWindow.baml
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\obj\Debug\SceltaIniziale.baml
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Videogioco.g.resources
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Videogioco.Properties.Resources.resources
+C:\Users\simon\Documents\GitHub\Videogioco\Videogioco\obj\Debug\Videogioco.csproj.GenerateResource.cache
