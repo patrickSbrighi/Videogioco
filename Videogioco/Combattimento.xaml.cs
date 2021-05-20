@@ -26,22 +26,15 @@ namespace Videogioco
         private List<Campo> _campiDisponibili;
         private string _idUltimoCampoScelto;
         private bool _finitoRound;
-<<<<<<< HEAD
-        private int _vittorieBlu;
-        private int _vittorieRosso;
-=======
         private const int NUMERO_ROUND_TOTALE = 3;
         private int _roundVintiBlu;
         private int _roundVintiRosso;
         private string _vincitorePartita;
->>>>>>> Lazzari
 
         public Combattimento(Utente rosso, Utente blu)
         {
             InitializeComponent();
             duello = new Duello(rosso, blu);
-            _vittorieBlu = 0;
-            _vittorieRosso = 0;
             InizializzazioneElementi();
             _roundVintiRosso = 0;
             _roundVintiBlu = 0;
@@ -203,54 +196,36 @@ namespace Videogioco
 
         private void Vittoria(string vincitoreRound)
         {
-<<<<<<< HEAD
-=======
-            lblVincitoreRound.Content = "Il vincitore del round " + duello.RoundCorrente +" è: "+ vincitoreRound;
->>>>>>> Lazzari
+            lblVincitoreRound.Content = "Il vincitore del round " + duello.RoundCorrente + " è: " + vincitoreRound;
             btnSessione.Visibility = Visibility.Visible;
-            if(vincitoreRound == "Rosso")
+            if (vincitoreRound == "Rosso")
             {
                 _roundVintiRosso++;
-            }else if(vincitoreRound == "Blu")
+            }
+            else if (vincitoreRound == "Blu")
             {
                 _roundVintiBlu++;
             }
             lblRoundVintiRosso.Content = _roundVintiRosso;
             lblRoundVintiBlu.Content = _roundVintiBlu;
 
-            if (vincitore == "Blu")
-                _vittorieBlu++;
-            else
-                _vittorieRosso++;
-            
-
             if (duello.RoundCorrente != 3)
             {
                 _finitoRound = true;
                 btnSessione.Content = "Prossimo round";
-                lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
             }
-            else 
+            else
             {
                 btnSessione.Content = "Home";
-<<<<<<< HEAD
-
-                if (_vittorieRosso > _vittorieBlu)
-                    vincitore = "Rosso";
-                else
-                    vincitore = "Blu";
-
-                lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
-=======
-                if(_roundVintiBlu > _roundVintiRosso)
+                if (_roundVintiBlu > _roundVintiRosso)
                 {
                     _vincitorePartita = "Blu";
-                }else if(_roundVintiRosso > _roundVintiBlu)
+                }
+                else if (_roundVintiRosso > _roundVintiBlu)
                 {
                     _vincitorePartita = "Rosso";
                 }
                 lblVincitorePartita.Content = "Vince la partita: " + _vincitorePartita;
->>>>>>> Lazzari
             }
         }
 

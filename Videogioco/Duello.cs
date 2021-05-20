@@ -70,13 +70,9 @@ namespace Videogioco
                 ricarica.Start();
             }
             else if (UtenteRosso.Schivato)
-<<<<<<< HEAD
-                UtenteRosso.Schivato = false;
-=======
             {
                 UtenteRosso.Schivato = false;
             }
->>>>>>> Lazzari
         }
         public void SchivaRosso()
         {

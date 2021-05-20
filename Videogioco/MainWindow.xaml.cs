@@ -23,14 +23,14 @@ namespace Videogioco
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Arma> listaArmiDaSerializzare;
+        /*List<Arma> listaArmiDaSerializzare;
         ArmaDistanza arma;
         ArmaVicino arma2;
         Personaggio personaggio;
         List<Personaggio> listaPersonaggiDaSerializzare;
         List<ArmaDistanza> listaArmiDistanza;
         List<ArmaVicino> listaArmiVicino;
-        List<Campo> listaCampi;
+        List<Campo> listaCampi;*/
         public MainWindow()
         {
             InitializeComponent();/*
@@ -83,7 +83,7 @@ namespace Videogioco
             */
         }
 
-        public void ScriviFileArmiDistanza()
+       /* public void ScriviFileArmiDistanza()
         {
             using (StreamWriter sr = new StreamWriter("ArmiDistanza.xml"))
             {
@@ -120,7 +120,7 @@ namespace Videogioco
                 
                 serializer.Serialize(sr, listaPersonaggiDaSerializzare);
             }
-        }
+        }*/
 
         private const string FILE_REGOLE = ""; //TODO zutty pdf
         private const string FILE_PERSONAGGI = "";//TODO zutty pdf
