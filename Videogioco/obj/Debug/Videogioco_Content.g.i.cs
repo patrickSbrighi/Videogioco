@@ -8,11 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/campo1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/campo2.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/campo3.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/home.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/sfondopng.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/sfondi/vs.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/personaggi%20blu/golem/golem%20blu%201.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/personaggi%20blu/golem/golem%20blu%202.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/personaggi%20blu/golem/golem%20blu%203.png")]
 
 

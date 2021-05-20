@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Image Margin="-366,-112,-367.667,-118.333" Source="sfondopng.png" Stretch="Fill"/>
-        <Image Margin="-241,-145,-739.667,-231.333" Source="home.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
+        <Image Margin="-366,-112,-367.667,-118.333" Source="/Personaggi Videogioco/Sfondi/sfondopng.png" Stretch="Fill"/>
+        <Image Margin="-241,-145,-739.667,-231.333" Source="/Personaggi Videogioco/Sfondi/home.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
         <Button Name="btnInizia"  Content="Inizia" HorizontalAlignment="Left" Margin="256,150,0,0" VerticalAlignment="Top" Width="274" Height="52" Click="BtnInizia_Click" Background="Red"/>
         <Button Content="Regolamento" HorizontalAlignment="Left" Margin="256,208,0,0" VerticalAlignment="Top" Width="274" Height="52" Background="#FF00A1FF"/>
         <Button Content="Mostra Personaggi" HorizontalAlignment="Left" Margin="256,265,0,0" VerticalAlignment="Top" Width="274" Height="52"  Background="#FF0ED418"/>
