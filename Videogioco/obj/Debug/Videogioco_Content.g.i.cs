@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marksman%20rosso%201.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/personaggi%20blu/golem/golem%20blu%201.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/personaggi%20blu/golem/golem%20blu%202.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("personaggi%20videogioco/personaggi%20blu/golem/golem%20blu%203.png")]
 
 

@@ -8,21 +8,21 @@
         mc:Ignorable="d"
         Title="SceltaIniziale" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Image Margin="-145,-165,-144.667,-165.333" Source="VS.png" Stretch="Fill"/>
+        <Image Margin="-145,-165,-144.667,-165.333" Source="/Personaggi Videogioco/Sfondi\VS.png" Stretch="Fill"/>
         <Button x:Name="btnBP2" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBP2_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Blu/Maga blu.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Blu/MAGA/Maga blu 1.png"/>
         </Button>
         <Button x:Name="btnBP3" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBP3_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Blu/Marksman blu.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Blu/MARKSMAN/Marksman blu 1.png"/>
         </Button>
         <Button x:Name="btnBP4" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBP4_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Blu/Golem blu.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Blu/GOLEM/Golem blu 1.png"/>
         </Button>
         <Button x:Name="btnBP5" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBP5_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Blu/Guerriero blu.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Blu/GUERRIERO/Guerriero blu 1.png"/>
         </Button>
         <Button x:Name="btnBP1" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBP1_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Blu/Valkiria blu.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Blu/VALKIRIA/Valkiria blu 1.png"/>
         </Button>
         <Button x:Name="btnBA3" HorizontalAlignment="Left" Margin="85,177,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBA3_Click">
             <Image Source="/Personaggi Videogioco/Armi blu/guantone blu.png"/>
@@ -40,7 +40,7 @@
             <Image Source="/Personaggi Videogioco/Armi blu/lancia blu.png"/>
         </Button>
         <Button x:Name="btnBP6" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBP6_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Blu/Ninja blu.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Blu/NINJA/Ninja blu 1.png"/>
         </Button>
         <Button x:Name="btnBA1" HorizontalAlignment="Left" Margin="85,56,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnBA1_Click">
             <Image Source="/Personaggi Videogioco/Armi blu/arco blu.png"/>
@@ -61,25 +61,25 @@
             <Image Source="/Personaggi Videogioco/Armi Rosso/arco rosso.png"/>
         </Button>
         <Button x:Name="btnRP3" HorizontalAlignment="Left" Margin="726,177,0,0" VerticalAlignment="Top" Width="57" Height="56" Background="White" Click="btnRP3_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Rossi/Marksman rosso.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Rossi/MARKSMAN/Marksman rosso 1.png"/>
         </Button>
         <Button x:Name="btnRP4"  HorizontalAlignment="Left" Margin="726,238,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnRP4_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Rossi/Golem rosso.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Rossi/GOLEM/Golem rosso 1.png"/>
         </Button>
         <Button x:Name="btnRP5" HorizontalAlignment="Left" Margin="726,298,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnRP5_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Rossi/Guerriero rosso.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Rossi/GUERRIERO/Guerriero rosso 1.png"/>
         </Button>
         <Button x:Name="btnRP6" HorizontalAlignment="Left" Margin="726,359,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnRP6_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Rossi/Ninja rosso.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Rossi/NINJA/Ninja rosso 1.png"/>
         </Button>
         <Button x:Name="btnRP2" HorizontalAlignment="Left" Margin="726,117,0,0" VerticalAlignment="Top" Width="57" Height="56" Background="#FFF8F8F8" Click="btnRP2_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Rossi/Maga rosso.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Rossi/MAGA/Maga rosso 1.png"/>
         </Button>
         <Button x:Name="btnRA6" HorizontalAlignment="Left" Margin="651,359,0,0" VerticalAlignment="Top" Width="57" Height="56" Click="btnRA6_Click">
             <Image Source="/Personaggi Videogioco/Armi Rosso/spada rosso.png"/>
         </Button>
         <Button x:Name="btnRP1"  HorizontalAlignment="Left" Margin="726,56,0,0" VerticalAlignment="Top" Width="57" Height="56" Background="#FFF6F6F6" Click="btnRP1_Click">
-            <Image Source="/Personaggi Videogioco/Personaggi Rossi/Valkiria rosso.png"/>
+            <Image Source="/Personaggi Videogioco/Personaggi Rossi/VALKIRIA/Valkiria rosso 1.png"/>
         </Button>
         <Button x:Name="btnInizia" Content="Inizia" HorizontalAlignment="Left" Margin="334,283,0,0" VerticalAlignment="Top" Width="109" Height="46" Click="btnInizia_Click"/>
 

@@ -109,6 +109,7 @@
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Personaggi Videogioco\.DS_Store" />
+    <None Include="Personaggi Videogioco\Sfondi\home.psd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,32 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="sfondopng.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pngtree-comic-vs-background-with-blue-orange-image_321556.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="VS.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Personaggi Videogioco\Personaggi Blu\Golem blu.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Blu\Guerriero blu.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Blu\Maga blu.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Blu\Marksman blu.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Blu\Ninja blu.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Blu\Valkiria blu.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Golem rosso.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Guerriero rosso.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Maga rosso.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Marksman rosso.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Ninja rosso.png" />
-    <Resource Include="Personaggi Videogioco\Personaggi Rossi\Valkiria rosso.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
@@ -163,7 +138,72 @@
     <Resource Include="Personaggi Videogioco\Armi rosso\spada rosso.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Marksman rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Sfondi\Campo1.png" />
+    <Resource Include="Personaggi Videogioco\Sfondi\Campo2.jpg" />
+    <Resource Include="Personaggi Videogioco\Sfondi\Campo3.jpg" />
+    <Resource Include="Personaggi Videogioco\Sfondi\home.png" />
+    <Resource Include="Personaggi Videogioco\Sfondi\sfondopng.png" />
+    <Resource Include="Personaggi Videogioco\Sfondi\VS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\GOLEM\Golem rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\GOLEM\Golem rosso 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\GOLEM\Golem rosso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\GUERRIERO\Guerriero rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\GUERRIERO\Guerriero rosso 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\GUERRIERO\Guerriero rosso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\MARKSMAN\Marksman rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\MARKSMAN\Marksman rosso 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\MARKSMAN\Marksman rosso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\MAGA\Maga rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\MAGA\Maga rosso 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\MAGA\Maga rosso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\NINJA\Ninja rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\NINJA\Ninja rosso 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\NINJA\Ninja rosso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\VALKIRIA\Valkiria rosso 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\VALKIRIA\Valkiria rosso 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Rossi\VALKIRIA\Valkiria rosso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\VALKIRIA\Valkiria blu 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\VALKIRIA\Valkiria blu 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\VALKIRIA\Valkiria blu 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\NINJA\Ninja blu 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\NINJA\Ninja blu 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\NINJA\Ninja blu 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\MARKSMAN\Marksman blu 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\MARKSMAN\Marksman blu 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\MARKSMAN\Marksman blu 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\MAGA\Maga blu 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\MAGA\Maga blu 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\MAGA\Maga blu 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\GUERRIERO\Guerriero blu 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\GUERRIERO\Guerriero blu 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\GUERRIERO\Guerriero blu 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\GOLEM\Golem blu 1.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\GOLEM\Golem blu 2.png" />
+    <Resource Include="Personaggi Videogioco\Personaggi Blu\GOLEM\Golem blu 3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
