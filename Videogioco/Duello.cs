@@ -51,6 +51,8 @@ namespace Videogioco
                 Thread ricarica = new Thread(new ThreadStart(RicaricaRosso));
                 ricarica.Start();
             }
+            else if (UtenteBlu.Schivato)
+                UtenteBlu.Schivato = false;
         }
 
         public void SparaBlu()
@@ -64,19 +66,27 @@ namespace Videogioco
                 Thread ricarica = new Thread(new ThreadStart(RicaricaBlu));
                 ricarica.Start();
             }
+            else if (UtenteRosso.Schivato)
+                UtenteRosso.Schivato = false;
         }
         public void SchivaRosso()
         {
-            UtenteRosso.Schivato = true;
-            Thread t1 = new Thread(new ThreadStart(TogliSchivaRosso));
-            t1.Start();
+            if (!UtenteRosso.Schivato)
+            {
+                UtenteRosso.Schivato = true;
+                Thread t1 = new Thread(new ThreadStart(TogliSchivaRosso));
+                t1.Start();
+            }
         }
 
         public void SchivaBlu()
         {
-            UtenteBlu.Schivato = true;
-            Thread t1 = new Thread(new ThreadStart(TogliSchivaBlu));
-            t1.Start();
+            if (!UtenteBlu.Schivato)
+            {
+                UtenteBlu.Schivato = true;
+                Thread t1 = new Thread(new ThreadStart(TogliSchivaBlu));
+                t1.Start();
+            }
         }
 
         private void RicaricaBlu()

@@ -25,11 +25,15 @@ namespace Videogioco
         private List<Campo> _campi;
         private string _idUltimoCampoScelto;
         private bool _finitoRound;
+        private int _vittorieBlu;
+        private int _vittorieRosso;
 
         public Combattimento(Utente rosso, Utente blu)
         {
             InitializeComponent();
             duello = new Duello(rosso, blu);
+            _vittorieBlu = 0;
+            _vittorieRosso = 0;
             InizializzazioneElementi();
         }
 
@@ -180,17 +184,30 @@ namespace Videogioco
 
         private void Vittoria(string vincitore)
         {
-            lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
             btnSessione.Visibility = Visibility.Visible;
+
+            if (vincitore == "Blu")
+                _vittorieBlu++;
+            else
+                _vittorieRosso++;
+            
 
             if (duello.RoundCorrente != 3)
             {
                 _finitoRound = true;
                 btnSessione.Content = "Prossimo round";
+                lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
             }
             else 
             {
                 btnSessione.Content = "Home";
+
+                if (_vittorieRosso > _vittorieBlu)
+                    vincitore = "Rosso";
+                else
+                    vincitore = "Blu";
+
+                lblVincitore.Content = "Ha vinto il giocatore " + vincitore;
             }
         }
 
